@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+launcher_path=$(readlink -f "${BASH_SOURCE[0]}")
+project_dir=$(cd "$(dirname "$launcher_path")/.." && pwd)
+dependency_dir=$(find "$project_dir/.deps" -mindepth 1 -maxdepth 1 -type d -name 'openvino_genai_*' -print -quit)
+user_arguments=("$@")
+
+if [[ -z "$dependency_dir" ]]; then
+  echo "Shikai's OpenVINO GenAI SDK is missing. Run scripts/setup_cpp_runtime.sh first." >&2
+  exit 1
+fi
+if [[ ! -x "$project_dir/build/release/shikai" ]]; then
+  echo "Shikai is not built. Run scripts/build_cpp.sh first." >&2
+  exit 1
+fi
+
+set +u
+source "$dependency_dir/setupvars.sh" >/dev/null
+set -u
+set -- "${user_arguments[@]}"
+export HF_HUB_OFFLINE=1
+export TRANSFORMERS_OFFLINE=1
+
+has_model=false
+has_prompts=false
+for argument in "$@"; do
+  if [[ "$argument" == "--model" ]]; then
+    has_model=true
+  elif [[ "$argument" == "--prompts" ]]; then
+    has_prompts=true
+  fi
+done
+
+extra_arguments=()
+if [[ "$has_model" == false ]]; then
+  extra_arguments+=(--model "$project_dir/models/qwen2.5-1.5b/int4")
+fi
+if [[ "${1:-}" == "benchmark" && "$has_prompts" == false ]]; then
+  extra_arguments+=(--prompts "$project_dir/benchmarks/prompts.jsonl")
+fi
+
+exec "$project_dir/build/release/shikai" "$@" "${extra_arguments[@]}"

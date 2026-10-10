@@ -7,13 +7,13 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(OpenVINOGenAI REQUIRED)
 
-add_executable(local-llm src/main.cpp)
-target_link_libraries(local-llm PRIVATE openvino::genai)
-target_compile_options(local-llm PRIVATE
+add_executable(shikai src/main.cpp)
+target_link_libraries(shikai PRIVATE openvino::genai openvino::runtime)
+target_compile_options(shikai PRIVATE
   $<$<CXX_COMPILER_ID:GNU,Clang>:-Wall;-Wextra;-Wpedantic>
 )
 
-install(TARGETS local-llm RUNTIME DESTINATION bin)
+install(TARGETS shikai RUNTIME DESTINATION bin)
 
 enable_testing()
 add_subdirectory(tests)

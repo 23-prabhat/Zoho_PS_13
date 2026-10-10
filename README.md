@@ -1,4 +1,4 @@
-# Local LLM on OpenVINO
+# Shikai — Local LLM on OpenVINO
 
 Offline C++17 application for running Qwen2.5-1.5B-Instruct with the OpenVINO GenAI C++ API.
 
@@ -13,9 +13,39 @@ key is required for this public model.
 ./scripts/run_chat.sh
 ```
 
-Use `/reset` to clear conversation history and `/exit` to quit. The default model is
-`models/qwen2.5-1.5b/int4`; an alternative local export can be supplied with
-`./build/release/local-llm --model /path/to/model` after sourcing the SDK's
+To make Shikai available as a normal shell command for your user account:
+
+```bash
+./scripts/install_shikai.sh
+shikai
+```
+
+The command-line modes are:
+
+```bash
+shikai                         # interactive chat (default)
+shikai devices                 # list OpenVINO hardware devices
+shikai generate --prompt "..." # one response, then exit
+shikai benchmark               # run prompt fixtures and write a metrics CSV
+shikai --help                  # full usage
+```
+
+Interactive commands are:
+
+```text
+/help   Show available commands
+/stats  Show metrics for the previous response
+/reset  Clear conversation history and previous statistics
+/exit   Quit cleanly
+```
+
+The application enforces a 2,048-token context budget and reserves 256 tokens for
+each response. If a conversation becomes too long, it removes the oldest complete
+user/assistant turns and prints a notice. It rejects a new prompt if that prompt alone
+cannot fit safely.
+
+The default model is `models/qwen2.5-1.5b/int4`; an alternative local export can be supplied with
+`./build/release/shikai chat --model /path/to/model` after sourcing the SDK's
 `setupvars.sh`.
 
 ## Recreate the setup
