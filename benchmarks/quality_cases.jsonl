@@ -1,0 +1,1 @@
+{"id":"quality-001","category":"explanation","prompt":"Why does quantization reduce model storage?","expected_points":["fewer bits per weight","metadata can add overhead"]}

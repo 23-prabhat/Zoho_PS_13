@@ -1,0 +1,1 @@
+# Generated lock file placeholder; do not install until versions are validated.

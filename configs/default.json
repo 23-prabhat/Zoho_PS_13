@@ -1,0 +1,7 @@
+{
+  "model_path": "models/qwen2.5-1.5b/int4",
+  "device": "CPU",
+  "context_budget": 2048,
+  "max_new_tokens": 256,
+  "do_sample": false
+}

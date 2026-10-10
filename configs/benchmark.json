@@ -1,0 +1,7 @@
+{
+  "model_variants": ["fp16", "int8", "int4"],
+  "device": "CPU",
+  "repetitions": 5,
+  "warmup_runs": 1,
+  "max_new_tokens": 128
+}

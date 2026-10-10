@@ -1,0 +1,58 @@
+# Local build products, downloaded SDKs, and Python environments
+/build/
+/cmake-build-*/
+/.cache/
+/.deps/
+/.venv/
+/venv/
+/env/
+
+# Local agent/tool state and credentials
+/.agents/
+/.aws/
+/.codex/
+
+# Python caches and tooling state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Downloaded checkpoints and generated OpenVINO weights
+/models/source/*
+!/models/source/.gitkeep
+/models/qwen2.5-1.5b/*/
+
+# Generated benchmark runs; keep only curated files committed deliberately
+/results/run-*/
+*.jsonl.tmp
+
+# Local/private transcripts and environment files
+*.transcript.json
+.env
+.env.*
+!.env.example
+
+# Logs, profiling output, crash dumps, and temporary files
+*.log
+*.prof
+*.trace
+core
+core.*
+*.tmp
+*.swp
+*~
+
+# Editors and operating-system metadata
+/.idea/
+/.vscode/
+.DS_Store
+Thumbs.db
+
+plan.md
+SETU20265SemProjectSelection1.pdf
+zoho_project_list_software.pdf
+docs
+
