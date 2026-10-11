@@ -1,0 +1,23 @@
+{
+  "source": {
+    "repository": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "license": "Apache-2.0"
+  },
+  "export": {
+    "path": "models/qwen2.5-1.5b/fp16",
+    "command": "scripts/export_models.sh fp16",
+    "weight_format": "fp16",
+    "size_bytes": 3108814933,
+    "sha256": {
+      "openvino_model.xml": "fcbe81ef203050979444ff1e808e652937d6aac1943811c3107dcad1884d08c7",
+      "openvino_model.bin": "29b14137e7ba0e9401af8481c91b44f132a03493b067c561b567be6fb0b4ac35"
+    }
+  },
+  "smoke_test": {
+    "status": "passed",
+    "device": "CPU",
+    "runtime": "OpenVINO GenAI C++ 2026.4.1.0",
+    "expected_output": "FP16 OK"
+  }
+}

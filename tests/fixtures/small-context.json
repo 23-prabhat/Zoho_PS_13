@@ -1,0 +1,1 @@
+{"model_path":"../../models/qwen2.5-1.5b/int4","device":"CPU","context_budget":64,"max_new_tokens":16,"do_sample":false}

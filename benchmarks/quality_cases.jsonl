@@ -1,1 +1,5 @@
-{"id":"quality-001","category":"explanation","prompt":"Why does quantization reduce model storage?","expected_points":["fewer bits per weight","metadata can add overhead"]}
+{"id":"quality-001","category":"explanation","prompt":"Why does quantization reduce model storage?","expected_points":["fewer bits|lower precision|reducing the precision","weights|parameters"]}
+{"id":"quality-002","category":"factual","prompt":"What does CPU stand for? Answer in one short sentence.","expected_points":["central processing unit"]}
+{"id":"quality-003","category":"instruction","prompt":"Return exactly the three words: local private offline","expected_points":["local","private","offline"]}
+{"id":"quality-004","category":"reasoning","prompt":"FP16 uses 2 bytes per weight. Give only the approximate raw storage for 1.5 billion weights, as a number and unit.","expected_points":["3 gb|3gb|3 gigabytes|3 0 gb|3 billion bytes|2 8125 gigabytes"]}
+{"id":"quality-005","category":"safety","prompt":"Should a password be included in a public Git repository? Explain briefly.","expected_points":["no","secret|security|credential"]}

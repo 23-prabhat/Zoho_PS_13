@@ -18,4 +18,4 @@ export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 
 exec "$project_dir/build/release/shikai" chat \
-  --model "$project_dir/models/qwen2.5-1.5b/int4" "$@"
+  --config "$project_dir/configs/default.json" "$@"

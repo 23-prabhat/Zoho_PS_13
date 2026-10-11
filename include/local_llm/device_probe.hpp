@@ -1,2 +1,10 @@
 #pragma once
-namespace local_llm { class DeviceProbe; }
+
+#include <iosfwd>
+
+namespace local_llm {
+class DeviceProbe {
+public:
+    static void print(std::ostream& output);
+};
+}  // namespace local_llm

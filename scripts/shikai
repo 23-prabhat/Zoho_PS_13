@@ -22,19 +22,19 @@ set -- "${user_arguments[@]}"
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 
-has_model=false
+has_config=false
 has_prompts=false
 for argument in "$@"; do
-  if [[ "$argument" == "--model" ]]; then
-    has_model=true
+  if [[ "$argument" == "--config" ]]; then
+    has_config=true
   elif [[ "$argument" == "--prompts" ]]; then
     has_prompts=true
   fi
 done
 
 extra_arguments=()
-if [[ "$has_model" == false ]]; then
-  extra_arguments+=(--model "$project_dir/models/qwen2.5-1.5b/int4")
+if [[ "$has_config" == false ]]; then
+  extra_arguments+=(--config "$project_dir/configs/default.json")
 fi
 if [[ "${1:-}" == "benchmark" && "$has_prompts" == false ]]; then
   extra_arguments+=(--prompts "$project_dir/benchmarks/prompts.jsonl")

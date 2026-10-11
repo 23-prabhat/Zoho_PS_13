@@ -1,7 +1,12 @@
 {
-  "model_path": "models/qwen2.5-1.5b/int4",
+  "model_path": "../models/qwen2.5-1.5b/int4",
   "device": "CPU",
   "context_budget": 2048,
   "max_new_tokens": 256,
-  "do_sample": false
+  "do_sample": false,
+  "inference_threads": 0,
+  "max_num_seqs": 1,
+  "enable_prefix_caching": false,
+  "cache_size_gb": 0,
+  "enable_eviction": false
 }
