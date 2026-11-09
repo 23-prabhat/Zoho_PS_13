@@ -218,8 +218,10 @@ User input → CLI/config validation → context budgeting → OpenVINO LLMPipel
 | `third_party/` | Retained upstream license and notice files |
 
 Downloaded models, SDKs, environments, builds, generated results and `output/` stay
-local. `docs/` contains local submission authoring material and is intentionally
-untracked. Public setup and technical guidance live in this README,
+local. The [documentation index](docs/README.md) covers architecture, requirements,
+model compression, KV caching, environment, benchmarks and the demonstration.
+Private report authoring remains under ignored `docs/submission/`.
+Public setup and technical guidance also live in this README,
 [CONTRIBUTING.md](CONTRIBUTING.md), and [guides/](guides/hardware-and-benchmarks.md).
 
 ## Validation and measured results

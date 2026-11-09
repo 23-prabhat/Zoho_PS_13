@@ -29,15 +29,20 @@ class ScriptTests(unittest.TestCase):
             root = Path(folder)
             for name in ("README.md", ".github/workflows/ci.yml", "guides/kv-cache.md",
                          "models/README.md", "src/new.cpp", "tests/__pycache__/bad.pyc",
-                         "scripts/.env", "models/weights/private.bin", ".aws/credentials"):
+                         "scripts/.env", "models/weights/private.bin", ".aws/credentials",
+                         "docs/README.md", "docs/architecture.md", "docs/submission/student.json",
+                         "docs/submission/assets/chat-session.txt", "docs/private.md"):
                 path = root / name
                 path.parent.mkdir(parents=True, exist_ok=True)
                 path.write_text("fixture")
             selected = package_submission.source_files(root)
             self.assertTrue({"README.md", ".github/workflows/ci.yml", "guides/kv-cache.md",
-                             "models/README.md", "src/new.cpp"}.issubset(selected))
+                             "models/README.md", "src/new.cpp", "docs/README.md",
+                             "docs/architecture.md"}.issubset(selected))
             self.assertFalse({"tests/__pycache__/bad.pyc", "scripts/.env",
-                              "models/weights/private.bin", ".aws/credentials"}.intersection(selected))
+                              "models/weights/private.bin", ".aws/credentials",
+                              "docs/submission/student.json", "docs/submission/assets/chat-session.txt",
+                              "docs/private.md"}.intersection(selected))
 
     def test_kv_report_separates_cold_followup_and_quality_measurements(self):
         with tempfile.TemporaryDirectory() as folder:

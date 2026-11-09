@@ -150,7 +150,8 @@ conversations and uncontrolled laptop conditions limit generalization.
   a nonzero overall run status and retain a diagnostic log.
 - Source checkpoint and INT4/INT8/FP16 IR checksums were verified; historical
   evidence was preserved. No new performance figures were invented.
-- Private report authoring is ignored consistently with the publication allowlist.
+- Reviewed technical docs are published under docs/ using an explicit file list.
+  Private report authoring under docs/submission/ stays outside publication.
   Public source includes this explanation; student details remain in the ZIP.
 - The PDF tables have visible cell boundaries, wrapped headers, fixed widths and
   repeating header rows. The final PDF is rendered and checked before packaging.

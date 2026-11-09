@@ -15,9 +15,13 @@ import tempfile
 import zipfile
 
 PROJECT = Path(__file__).resolve().parents[1]
+PUBLIC_DOCS = ("docs/README.md", "docs/architecture.md", "docs/requirements.md",
+    "docs/quantization.md", "docs/kv_cache.md", "docs/environment.md",
+    "docs/demo_checklist.md", "docs/final_report.md", "docs/benchmark_report.md",
+    "docs/assets/precision-throughput.svg", "docs/assets/context-ttft.svg")
 ROOT_FILES = (".gitignore", ".editorconfig", ".gitattributes", "CMakeLists.txt",
     "CMakePresets.json", "README.md", "CONTRIBUTING.md", "THIRD_PARTY_NOTICES.md",
-    "models/README.md", "models/source/.gitkeep", "results/README.md")
+    "models/README.md", "models/source/.gitkeep", "results/README.md") + PUBLIC_DOCS
 SOURCE_FOLDERS = (".github", "src", "include", "scripts", "tests", "configs",
     "requirements", "benchmarks", "models/manifests", "third_party", "guides",
     "results/validated-20261020", "results/validated-20261103", "results/validated-20261107",

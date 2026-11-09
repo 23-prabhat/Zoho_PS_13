@@ -15,6 +15,7 @@ evidence. Downloaded runtime assets are recreated by the setup scripts.
 | `results/validated-20261020/`, `results/validated-20261103/`, `results/validated-20261107/`, `results/validated-20261109/` | Reviewed evidence snapshots and their checksum indexes |
 | `.github/`, `.gitignore`, `.gitattributes`, `.editorconfig` | CI and repository settings |
 | `README.md`, `CONTRIBUTING.md`, `guides/` | Setup, use, evaluation and measured limitations |
+| Reviewed `docs/*.md` and selected `docs/assets/*.svg` | Technical documentation, public report summary and benchmark figures; exact paths are listed in `PUBLIC_DOCS` in the packager |
 | `third_party/`, `THIRD_PARTY_NOTICES.md` | Retained upstream dependency/model notices |
 
 | Keep local | Reason |
@@ -22,7 +23,7 @@ evidence. Downloaded runtime assets are recreated by the setup scripts.
 | `models/source/` checkpoint files and `models/qwen2.5-1.5b/` exports | Large downloaded/generated model artifacts; publish their manifests |
 | `.deps/`, `.venv/`, `.cache/`, `build/`, `tmp/`, `output/` | SDKs, environments, caches, binaries, temporary data and submission output |
 | `.aws/`, `.agents/`, `.codex/`, `.env*`, private keys and credentials | Machine/account data |
-| `docs/`, `plan.md`, `SUBMISSION_READINESS.md` | Private local report authoring and submission planning |
+| `docs/submission/`, unlisted documentation/assets, `plan.md`, `SUBMISSION_READINESS.md` | Private report authoring, student details, intermediate renders and submission planning |
 | `SETU20265SemProjectSelection1.pdf`, `zoho_project_list_software.pdf`, the supplied guidelines PDF | Supplied selection/college documents; not application source |
 | Unreviewed generated result folders and private chat transcripts | Publish a reviewed, checksummed snapshot instead |
 | Report PDF and submission ZIP | College submission artifacts; any public report copy needs a separate privacy/content review |

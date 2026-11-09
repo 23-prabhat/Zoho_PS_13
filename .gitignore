@@ -91,8 +91,21 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Local submission material and planning (docs/ stays untracked intentionally).
-/docs/
+# Publish reviewed technical documentation; keep submission authoring local.
+/docs/*
+!/docs/README.md
+!/docs/architecture.md
+!/docs/requirements.md
+!/docs/quantization.md
+!/docs/kv_cache.md
+!/docs/environment.md
+!/docs/demo_checklist.md
+!/docs/final_report.md
+!/docs/benchmark_report.md
+!/docs/assets/
+/docs/assets/*
+!/docs/assets/precision-throughput.svg
+!/docs/assets/context-ttft.svg
 /SUBMISSION_READINESS.md
 /SETU20265SemProjectSelection1.pdf
 /zoho_project_list_software.pdf
