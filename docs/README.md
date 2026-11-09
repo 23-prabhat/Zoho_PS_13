@@ -14,6 +14,8 @@ Updated 9 November 2026 to match the reviewed implementation and evidence.
 | [Technical project report](final_report.md) | Public overview of implementation, validation and research |
 | [Demonstration](demo_checklist.md) | Commands, expected behavior and viva topics |
 
+See [technology choices and ZIP contents](../guides/technology-and-delivery.md) for the language/framework rationale and complete delivery map.
+
 The [complete feature-purpose guide](../guides/project-summary.md) explains what
 was built and why each part is needed. Start with the [README setup](../README.md)
 and [contributor build instructions](../CONTRIBUTING.md) to reproduce it.

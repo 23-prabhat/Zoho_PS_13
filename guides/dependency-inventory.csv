@@ -1,0 +1,63 @@
+package,pinned_version,upstream_package_summary,project_usage
+annotated-doc,0.0.5,"Document parameters, class attributes, return types, and variables inline, with Annotated.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+anyio,4.15.1,High-level concurrency and networking framework on top of asyncio or Trio,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+certifi,2026.7.22,Python package for providing Mozilla's CA Bundle.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+charset-normalizer,3.5.2,"The Real First Universal Charset Detector. Open, modern and actively maintained alternative to Chardet.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+click,8.5.0,Composable command line interface toolkit,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+cloudpickle,3.1.2,Pickler class to extend the standard pickle.Pickler functionality,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+cmake,4.1.2,"CMake is an open-source, cross-platform family of tools designed to build, test and package software",Native build configuration and CTest
+filelock,4.1.0,A platform independent file lock.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+fsspec,2026.9.0,File-system specification,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+h11,0.16.0,"A pure-Python, bring-your-own-I/O implementation of HTTP/1.1",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+hf-xet,1.7.0,Fast transfer of large files with the Hugging Face Hub.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+httpcore,1.0.9,A minimal low-level HTTP client.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+httpcore2,2.13.1,A minimal low-level HTTP client.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+httpx,0.28.1,The next generation HTTP client.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+httpx2,2.13.1,The next generation HTTP client.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+huggingface_hub,1.21.0,"Client library to download and publish models, datasets and other repos on the huggingface.co hub",Pinned checkpoint download
+idna,3.20,Internationalized Domain Names in Applications (IDNA),Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+Jinja2,3.1.6,A very fast and expressive template engine.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+joblib,1.6.0,Lightweight pipelining with Python functions,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+markdown-it-py,4.2.0,"Python port of markdown-it. Markdown parsing, done right!",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+MarkupSafe,3.0.3,Safely add untrusted strings to HTML/XML markup.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+mdurl,0.1.2,Markdown URL utilities,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+mpmath,1.3.0,Python library for arbitrary-precision floating-point arithmetic,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+narwhals,2.27.1,Extremely lightweight compatibility layer between dataframe libraries,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+networkx,3.6.1,Python package for creating and manipulating graphs and networks,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+ninja,1.13.2,Ninja is a small build system with a focus on speed,Native build executor
+nncf,3.4.0,Neural Networks Compression Framework,INT4/INT8 weight compression through exporter
+numpy,2.4.6,Fundamental package for array computing in Python,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+openvino,2026.4.1,OpenVINO(TM) Runtime,Python conversion/export bindings
+openvino-genai,2026.4.1.0,"Library of the most popular Generative AI model pipelines, optimized execution methods, and samples",Installed Python SDK counterpart; deployed application uses native C++ SDK
+openvino-telemetry,2025.2.0,"OpenVINO™ Telemetry package for sending statistics with user's consent, used in combination with other OpenVINO™ packages.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+openvino-tokenizers,2026.4.1.0,Convert tokenizers into OpenVINO models,Tokenizer IR export and native tokenizer integration
+optimum,2.3.0,"Optimum Library is an extension of the Hugging Face Transformers library, providing a framework to integrate third-party libraries from Hardware Partners and interface with their specific functionality.",Exporter command framework
+optimum-intel,2.2.0,"Optimum Library is an extension of the Hugging Face Transformers library, providing a framework to integrate third-party libraries from Hardware Partners and interface with their specific functionality.",OpenVINO model export integration
+packaging,26.3,Core utilities for Python packages,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+pillow,12.3.0,Python Imaging Library (fork),Brand raster exports and report image handling; not model inference
+pip,26.2.1,The PyPA recommended tool for installing Python packages.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+psutil,7.2.2,Cross-platform lib for process and system monitoring.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+pydot,4.0.1,Python interface to Graphviz's Dot,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+Pygments,2.21.0,Pygments is a syntax highlighting package written in Python.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+pyparsing,3.3.3,pyparsing - Classes and methods to define and execute parsing grammars,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+PyYAML,6.0.3,YAML parser and emitter for Python,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+regex,2026.9.29,"Alternative regular expression module, to replace re.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+requests,2.34.2,Python HTTP for Humans.,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+rich,15.0.0,"Render rich text, tables, progress bars, syntax highlighting, markdown and more to the terminal",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+safetensors,0.8.0,,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+scikit-learn,1.9.1,A set of python modules for machine learning and data mining,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+scipy,1.18.1,Fundamental algorithms for scientific computing in Python,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+setuptools,78.1.0,"Easily download, build, install, upgrade, and uninstall Python packages",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+shellingham,1.5.4,Tool to Detect Surrounding Shell,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+sympy,1.14.0,Computer algebra system (CAS) in Python,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+tabulate,0.10.0,Pretty-print tabular data,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+threadpoolctl,3.7.0,threadpoolctl,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+tokenizers,0.22.2,,Source tokenizer support through preparation stack
+torch,2.14.1+cpu,Tensors and Dynamic neural networks in Python with strong GPU acceleration,Source-model preparation/export foundation; no training or deployed Python inference
+torchvision,0.29.1+cpu,image and video datasets and models for torch deep learning,Retained PyTorch/export stack package; no Shikai vision feature
+tqdm,4.70.1,"Fast, Extensible Progress Meter",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+transformers,5.5.4,"Transformers: the model-definition framework for state-of-the-art machine learning models in text, vision, audio, and multimodal models, for both inference and training.",Source architecture/config/tokenizer loading through exporter
+truststore,0.10.4,Verify certificates using native system trust stores,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+typer,0.25.1,"Typer, build great CLIs. Easy to code. Based on Python type hints.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+typing_extensions,4.16.0,Backported and Experimental Type Hints for Python 3.9+,Retained upstream export-environment support dependency; not a separately implemented Shikai feature
+urllib3,2.8.0,"HTTP library with thread-safe connection pooling, file post, and more.",Retained upstream export-environment support dependency; not a separately implemented Shikai feature

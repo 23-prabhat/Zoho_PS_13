@@ -8,6 +8,8 @@ comparing model precision, context length, CPU threading and GPU execution.
 
 Reusable vector, transparent PNG and terminal versions are in the [brand asset kit](assets/brand/README.md).
 
+For language/framework choices and a folder-by-folder ZIP guide, read [Technology and delivery](guides/technology-and-delivery.md).
+
 For a complete explanation of each feature, its purpose, the execution flow and
 the measured decisions, read the [project summary](guides/project-summary.md).
 The [research notes](guides/research-notes.md) connect primary sources to the implementation.
