@@ -1,0 +1,22 @@
+id,status,error
+benchmark,error,"105 warnings generated.
+15 warnings generated.
+12 warnings generated.
+105 warnings generated.
+105 warnings generated.
+105 warnings generated.
+105 warnings generated.
+105 warnings and 145 errors generated.
+105 warnings generated.
+149 warnings generated.
+shikai: Exception from src/inference/src/cpp/core.cpp:117:
+Exception from src/inference/src/dev/plugin.cpp:54:
+Check 'false' failed at src/plugins/intel_gpu/src/plugin/program_builder.cpp:168:
+[GPU] ProgramBuilder build failed!
+Exception from src/plugins/intel_gpu/src/runtime/ocl/ocl_kernel_builder.hpp:73:
+[GPU] clBuildProgram, error code: -11 CL_BUILD_PROGRAM_FAILURE
+
+
+
+
+"

@@ -1,0 +1,94 @@
+{
+  "openvino": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "Available OpenVINO devices\n  \u25cf CPU     13th Gen Intel(R) Core(TM) i5-13420H\n      Device default KV-cache precision hint: u8\n  \u25cf GPU     Intel(R) UHD Graphics (iGPU)\n      Device default KV-cache precision hint: dynamic"
+  },
+  "devices": [
+    {
+      "id": "CPU",
+      "name": "13th Gen Intel(R) Core(TM) i5-13420H"
+    },
+    {
+      "id": "GPU",
+      "name": "Intel(R) UHD Graphics (iGPU)"
+    }
+  ],
+  "gpu_devices": [
+    "GPU"
+  ],
+  "render_nodes": [
+    "/dev/dri/renderD128",
+    "/dev/dri/renderD129"
+  ],
+  "project_intel_runtime": true,
+  "opencl_icds": [
+    "/etc/OpenCL/vendors/nvidia.icd"
+  ],
+  "pci_graphics": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "00:02.0 VGA compatible controller [0300]: Intel Corporation Raptor Lake-P [UHD Graphics] [8086:a7a8] (rev 04)\n01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA107BM / GN20-P0-R-K2 [GeForce RTX 3050 6GB Laptop GPU] [10de:25ac] (rev a1)"
+  },
+  "opencl": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "Platform #0: Intel(R) OpenCL Graphics (integrated)\n `-- Device #0: Intel(R) UHD Graphics"
+  },
+  "nvidia": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 615.71.09"
+  },
+  "project_intel_runtime_manifest": {
+    "scope": "project-local Fedora Intel OpenCL userspace runtime",
+    "packages": [
+      {
+        "file": "clang-libs-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "fdd9a2a0098fb0b3fd1594020ff5fce44ce8e6c9cdc23d3a26eb0add086a073e"
+      },
+      {
+        "file": "clang-resource-filesystem-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "0e83fa0e713bf318c1abad2cb759aeebcb8b64f6addf74d1e2d8392bb5ff7780"
+      },
+      {
+        "file": "compiler-rt-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "a37f534633813c08bdbf393fa364bc0c64ee5a72bd997231ebf655c117f89007"
+      },
+      {
+        "file": "intel-igc-2.41.9-2.fc44.x86_64.rpm",
+        "sha256": "26bb910627db9163a51b4562d69791252cdf358b9ec27118420292fcca45b521"
+      },
+      {
+        "file": "intel-igc-libs-2.41.9-2.fc44.x86_64.rpm",
+        "sha256": "5414297a3e86db6140a5dece1aba8c1852a2f12a3f768d150d48dee722aad05e"
+      },
+      {
+        "file": "intel-opencl-26.35.39758.11-3.fc44.x86_64.rpm",
+        "sha256": "030c6f7ffc23aaa9086cba5c35f07e801afef733936fc4112efca35565444eb7"
+      },
+      {
+        "file": "intel-opencl-clang-22.1.4-2.fc44.x86_64.rpm",
+        "sha256": "18d12ee1b0e5c748c0dc66ff8da1151498a12eee73cfeb609201870d7a445964"
+      },
+      {
+        "file": "libomp-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "d86c3cc305bc4ffa7b3317ff57b4266a50d13f38d48662f67a17c7d498cf2b46"
+      },
+      {
+        "file": "libomp-devel-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "1016f58743005ddd954fda973257e40c5dc7680e812b4a5cf3c50dd1460bab96"
+      },
+      {
+        "file": "lld-libs-22.1.8-4.fc44.x86_64.rpm",
+        "sha256": "6c5a6dc013f86d446186d5d8afe85bd8c2a0adb9ffea94f69007521f6b6b78bb"
+      },
+      {
+        "file": "spirv-llvm-translator-22.1.2-1.fc44.x86_64.rpm",
+        "sha256": "6e82863bc59b46d06b4c7a34c2e21f1184bd9472caa2c6c19f952ebe7a7c3200"
+      }
+    ]
+  },
+  "gpu_status": "available",
+  "next_step": "Run the devices benchmark suite to compare the same model and prompts on CPU and detected GPUs."
+}

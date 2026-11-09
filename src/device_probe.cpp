@@ -13,6 +13,12 @@ void DeviceProbe::print(std::ostream& output) {
         try { full_name = core.get_property(device, ov::device::full_name); }
         catch (...) { full_name = "name unavailable"; }
         output << "  ● " << std::left << std::setw(8) << device << full_name << '\n';
+        try {
+            output << "      Device default KV-cache precision hint: "
+                   << core.get_property(device, ov::hint::kv_cache_precision) << '\n';
+        } catch (...) {
+            output << "      Device default KV-cache precision hint: not queryable\n";
+        }
     }
 }
 }  // namespace local_llm

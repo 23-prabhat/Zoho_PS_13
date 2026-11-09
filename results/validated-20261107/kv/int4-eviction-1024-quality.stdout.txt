@@ -1,0 +1,26 @@
+Benchmarking Qwen2.5-1.5B-Instruct INT4 on CPU with 24 prompt(s).
+  strict-001 [1/1]: 44 in / 4 out, 17.43 tok/s
+  strict-002 [1/1]: 40 in / 2 out, 17.13 tok/s
+  strict-003 [1/1]: 53 in / 5 out, 15.33 tok/s
+  strict-004 [1/1]: 52 in / 4 out, 17.61 tok/s
+  strict-005 [1/1]: 53 in / 20 out, 17.82 tok/s
+  strict-006 [1/1]: 53 in / 14 out, 17.88 tok/s
+  strict-007 [1/1]: 44 in / 4 out, 17.77 tok/s
+  strict-008 [1/1]: 44 in / 4 out, 17.84 tok/s
+  strict-009 [1/1]: 42 in / 2 out, 16.97 tok/s
+  strict-010 [1/1]: 44 in / 3 out, 17.37 tok/s
+  strict-011 [1/1]: 44 in / 4 out, 17.79 tok/s
+  strict-012 [1/1]: 62 in / 64 out, 17.72 tok/s
+  strict-013 [1/1]: 67 in / 15 out, 17.81 tok/s
+  strict-014 [1/1]: 63 in / 64 out, 17.74 tok/s
+  strict-015 [1/1]: 56 in / 11 out, 17.70 tok/s
+  strict-016 [1/1]: 57 in / 16 out, 16.98 tok/s
+  strict-017 [1/1]: 62 in / 4 out, 17.63 tok/s
+  strict-018 [1/1]: 50 in / 2 out, 17.14 tok/s
+  strict-019 [1/1]: 317 in / 15 out, 17.52 tok/s
+  strict-020 [1/1]: 829 in / 8 out, 17.10 tok/s
+  strict-021 [1/1]: 1461 in / 64 out, 14.36 tok/s
+  strict-022 [1/1]: 828 in / 12 out, 16.52 tok/s
+  strict-023 [1/1]: 49 in / 64 out, 16.50 tok/s
+  strict-024 [1/1]: 54 in / 64 out, 16.44 tok/s
+Results saved to "results/kv-quality-20261107/int4-eviction-1024-quality.csv"

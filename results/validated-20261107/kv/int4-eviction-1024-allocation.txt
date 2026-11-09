@@ -1,0 +1,1 @@
+Cache allocation probe saved to "results/kv-quality-20261107/int4-eviction-1024-allocation.csv". Allocated bytes include free pool blocks; usage counters describe the probe pipeline.

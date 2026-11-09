@@ -1,0 +1,20 @@
+Test project /home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/build/release
+    Start  1: resource_profiler
+1/6 Test  #1: resource_profiler ................   Passed    0.09 sec
+    Start  2: config_validation
+2/6 Test  #2: config_validation ................   Passed    0.08 sec
+    Start  3: argument_validation
+3/6 Test  #3: argument_validation ..............   Passed    2.54 sec
+    Start  4: cache_option_validation
+4/6 Test  #4: cache_option_validation ..........   Passed    0.32 sec
+    Start  5: missing_model_files
+5/6 Test  #5: missing_model_files ..............   Passed    0.08 sec
+    Start 27: preparation_and_reporting
+6/6 Test #27: preparation_and_reporting ........   Passed    0.46 sec
+
+100% tests passed, 0 tests failed out of 6
+
+Label Time Summary:
+unit    =   3.57 sec*proc (6 tests)
+
+Total Test time (real) =   3.57 sec

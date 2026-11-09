@@ -1,0 +1,10 @@
+Test project /home/prabhat/college/Zoho_5th_sem/build/release
+    Start 27: preparation_and_reporting
+1/1 Test #27: preparation_and_reporting ........   Passed    0.41 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Label Time Summary:
+unit    =   0.41 sec*proc (1 test)
+
+Total Test time (real) =   0.41 sec

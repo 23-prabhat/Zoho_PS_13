@@ -3,20 +3,24 @@ set -euo pipefail
 
 launcher_path=$(readlink -f "${BASH_SOURCE[0]}")
 project_dir=$(cd "$(dirname "$launcher_path")/.." && pwd)
-dependency_dir=$(find "$project_dir/.deps" -mindepth 1 -maxdepth 1 -type d -name 'openvino_genai_*' -print -quit)
+dependency_dir="$project_dir/.deps/openvino_genai_ubuntu24_2026.4.1.0_x86_64"
 user_arguments=("$@")
+binary_path="${SHIKAI_BINARY:-$project_dir/build/release/shikai}"
 
-if [[ -z "$dependency_dir" ]]; then
+if [[ ! -f "$dependency_dir/setupvars.sh" ]]; then
   echo "Shikai's OpenVINO GenAI SDK is missing. Run scripts/setup_cpp_runtime.sh first." >&2
   exit 1
 fi
-if [[ ! -x "$project_dir/build/release/shikai" ]]; then
+if [[ ! -x "$binary_path" ]]; then
   echo "Shikai is not built. Run scripts/build_cpp.sh first." >&2
   exit 1
 fi
 
 set +u
 source "$dependency_dir/setupvars.sh" >/dev/null
+if [[ "${SHIKAI_USE_LOCAL_GPU:-1}" != "0" && -f "$project_dir/.deps/intel-gpu-runtime/env.sh" ]]; then
+  source "$project_dir/.deps/intel-gpu-runtime/env.sh"
+fi
 set -u
 set -- "${user_arguments[@]}"
 export HF_HUB_OFFLINE=1
@@ -24,13 +28,27 @@ export TRANSFORMERS_OFFLINE=1
 
 has_config=false
 has_prompts=false
+skip_value=false
 for argument in "$@"; do
+  if [[ "$skip_value" == true ]]; then
+    skip_value=false
+    continue
+  fi
   if [[ "$argument" == "--config" ]]; then
     has_config=true
   elif [[ "$argument" == "--prompts" ]]; then
     has_prompts=true
   fi
+  case "$argument" in
+    --model|--device|--prompt|--prompt-file|--prompts|--output|--config|--context-budget|--max-new-tokens|--repetitions|--warmup-runs|--threads|--kv-cache-precision|--cache-size-gb|--num-kv-blocks|--max-batched-tokens|--eviction-start|--eviction-recent|--eviction-max)
+      skip_value=true ;;
+  esac
 done
+
+if [[ "$skip_value" == true ]]; then
+  echo "shikai: $argument requires a value" >&2
+  exit 1
+fi
 
 extra_arguments=()
 if [[ "$has_config" == false ]]; then
@@ -40,4 +58,4 @@ if [[ "${1:-}" == "benchmark" && "$has_prompts" == false ]]; then
   extra_arguments+=(--prompts "$project_dir/benchmarks/prompts.jsonl")
 fi
 
-exec "$project_dir/build/release/shikai" "$@" "${extra_arguments[@]}"
+exec "$binary_path" "$@" "${extra_arguments[@]}"

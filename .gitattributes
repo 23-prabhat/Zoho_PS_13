@@ -1,0 +1,23 @@
+* text=auto
+*.sh text eol=lf
+scripts/shikai text eol=lf
+*.py text eol=lf
+*.cpp text eol=lf
+*.hpp text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.csv text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.svg text eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.zip binary
+
+# Preserve recorded artifact bytes so evidence checksums survive a Git checkout.
+results/validated-20261020/** -text
+results/validated-20261103/** -text
+results/validated-20261107/** -text
+results/validated-20261109/** -text
+third_party/** -text

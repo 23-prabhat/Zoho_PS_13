@@ -1,0 +1,4 @@
+Verified assets and SHA-256 hashes at /home/prabhat/college/Zoho_5th_sem/models/source/qwen2.5-1.5b-instruct
+Verified assets and SHA-256 hashes at /home/prabhat/college/Zoho_5th_sem/models/qwen2.5-1.5b/int4
+Verified assets and SHA-256 hashes at /home/prabhat/college/Zoho_5th_sem/models/qwen2.5-1.5b/int8
+Verified assets and SHA-256 hashes at /home/prabhat/college/Zoho_5th_sem/models/qwen2.5-1.5b/fp16

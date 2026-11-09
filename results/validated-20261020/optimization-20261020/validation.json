@@ -1,0 +1,19 @@
+{
+  "binary_sha256": "5bc33a637831adb3f94ffd0598f5dbfd390d81680ca2aaa845b1079be7ac95cd",
+  "model": "Qwen2.5-1.5B-Instruct INT4",
+  "performance_repetitions": 3,
+  "performance_warmup_runs": 1,
+  "performance_max_new_tokens": 32,
+  "quality_repetitions": 1,
+  "quality_warmup_runs": 0,
+  "quality_max_new_tokens": 128,
+  "quality_cases": 6,
+  "long_recall_supplement": "Supplemented the initial five-case run with the same long-recall fixture on each profile.",
+  "default_decision": "Keep runtime-selected CPU threads and automatic KV precision. Four threads and explicit U8 did not show a RAM saving; no default change justified.",
+  "limitations": [
+    "Sequential laptop runs, not controlled laboratory power/thermal conditions.",
+    "Quality rubric is small. Long-context reference-code recall failed across all CPU profiles.",
+    "CPU percentage is process CPU time / wall time, with 100 percent per logical CPU.",
+    "Sampled RAM peak can miss transients shorter than 50 ms."
+  ]
+}

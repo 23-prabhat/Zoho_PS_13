@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="28"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="100"
+	timestamp="2026-11-07T20:39:29"
+	>
+	<testcase name="resource_profiler" classname="resource_profiler" time="0.0883653" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="config_validation" classname="config_validation" time="0.077573" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="argument_validation" classname="argument_validation" time="2.60367" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="cache_option_validation" classname="cache_option_validation" time="0.32203" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="missing_model_files" classname="missing_model_files" time="0.0800309" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="context_limit" classname="context_limit" time="1.27782" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="rejected_prompt_preserves_history" classname="rejected_prompt_preserves_history" time="3.03737" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="noninteractive_context_limit" classname="noninteractive_context_limit" time="3.77301" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="benchmark_jsonl_parsing" classname="benchmark_jsonl_parsing" time="6.09826" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="single_token_metrics" classname="single_token_metrics" time="8.53788" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="resource_metrics" classname="resource_metrics" time="3.05038" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="kv_cache_configuration" classname="kv_cache_configuration" time="12.1264" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="conversation_reset" classname="conversation_reset" time="3.089" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="fresh_engine_reset_equivalence" classname="fresh_engine_reset_equivalence" time="6.3014" status="run">
+		<properties>
+			<property name="cmake_labels" value="reliability"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="metrics_reporting" classname="metrics_reporting" time="3.10171" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="real_model_smoke" classname="real_model_smoke" time="3.32555" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="complete_turn_trimming" classname="complete_turn_trimming" time="4.78259" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="conversation_continuity" classname="conversation_continuity" time="4.25905" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="cancellation_recovery" classname="cancellation_recovery" time="4.92419" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="streaming_generate_cancellation" classname="streaming_generate_cancellation" time="3.25557" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="prefix_cache_reset" classname="prefix_cache_reset" time="5.93372" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="conversation_benchmark" classname="conversation_benchmark" time="3.30928" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="cache_allocation_probe" classname="cache_allocation_probe" time="6.42449" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="missing_tokenizer" classname="missing_tokenizer" time="0.0823328" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="unavailable_device" classname="unavailable_device" time="0.329851" status="run">
+		<properties>
+			<property name="cmake_labels" value="integration"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="memory_reset_cycles" classname="memory_reset_cycles" time="5.55882" status="run">
+		<properties>
+			<property name="cmake_labels" value="reliability"/>
+		</properties>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="preparation_and_reporting" classname="preparation_and_reporting" time="0.414779" status="run">
+		<properties>
+			<property name="cmake_labels" value="unit"/>
+		</properties>
+		<system-out>......................................
+----------------------------------------------------------------------
+Ran 38 tests in 0.340s
+
+OK
+</system-out>
+	</testcase>
+	<testcase name="network_denied_offline_three_turns" classname="network_denied_offline_three_turns" time="4.10837" status="run">
+		<properties>
+			<property name="cmake_labels" value="offline"/>
+		</properties>
+		<system-out>{
+  "mode": "seccomp: only AF_UNIX socket creation allowed",
+  "status": "passed",
+  "completed_turns": 3,
+  "stdout": "  \u25c9  Shikai v0.2.0\n     Qwen2.5-1.5B-Instruct INT4 \u00b7 OpenVINO GenAI \u00b7 CPU\n     /home/prabhat/college/Zoho_5th_sem\n------------------------------------------------------------------\n  Try \"Explain quantization like I am a beginner\"\n------------------------------------------------------------------\n  Qwen2.5-1.5B-Instruct INT4 | ready | load 1188 ms | context 2048 | max output 4 | greedy\n  scheduler: sequences=1 prefix=off eviction=off cache=dynamic prefill-chunk=256 threads=runtime\n  KV-cache precision request: auto\n\n&gt; \nHello! How can\n\nQwen2.5-1.5B-Instruct INT4 | 32 in / 4 out | 17.48 tok/s\n\n&gt; Last response statistics:\n  Model load time:       1188.26 ms\n  Input tokens:          32\n  Output tokens:         4\n  Time to first token:   1590.26 ms\n  Time per output token: 57.21 ms/token\n  Throughput:            17.48 tokens/s\n  End-to-end time:       1762.6...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

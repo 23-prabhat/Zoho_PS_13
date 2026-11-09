@@ -1,0 +1,17 @@
+{
+  "model_path": "../models/qwen2.5-1.5b/int4",
+  "device": "CPU",
+  "context_budget": 2048,
+  "max_new_tokens": 256,
+  "do_sample": false,
+  "inference_threads": 4,
+  "max_num_seqs": 1,
+  "enable_prefix_caching": false,
+  "cache_size_gb": 0,
+  "max_num_batched_tokens": 256,
+  "enable_eviction": true,
+  "eviction_start": 32,
+  "eviction_recent": 128,
+  "eviction_max": 1024,
+  "kv_cache_precision": "auto"
+}

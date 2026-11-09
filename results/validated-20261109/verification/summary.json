@@ -1,0 +1,16 @@
+{
+  "checked_at": "2026-11-09T18:51:53.315364+05:30",
+  "ctest_passed": 28,
+  "ctest_failed": 0,
+  "ctest_skipped": 0,
+  "script_tests": 43,
+  "release_build": "passed",
+  "dependency_consistency": "passed",
+  "offline_enforcement": "seccomp: only AF_UNIX socket creation allowed",
+  "native_binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27",
+  "native_binary_unchanged_from_20261107": true,
+  "historical_benchmark_results_modified": false,
+  "cache_candidates_unchanged_on_rescreen": true,
+  "quality_tests_under_python_optimization": "passed",
+  "hosted_ci_execution": "not included in this local verification"
+}

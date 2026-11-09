@@ -1,0 +1,46 @@
+{
+  "timestamp": "2026-10-20T16:53:41.753402+05:30",
+  "binary_sha256": "488a713801203aeb24e3f2a49594601e917ffda4939c52adcc76ee016734e500",
+  "full_ctest": {
+    "passed": 22,
+    "skipped": 1,
+    "failed": 0,
+    "total": 23,
+    "skipped_case": "network_isolated_offline",
+    "skip_reason": "Network namespace creation denied by host"
+  },
+  "python_preparation_and_reporting_regressions": 11,
+  "python_regressions_rerun_after_final_script_changes": "passed",
+  "release_build_from_project_and_from_tmp": "passed",
+  "model_assets_and_ir_hashes": {
+    "int4": "passed",
+    "int8": "passed",
+    "fp16": "passed"
+  },
+  "cpu_generation_smoke": {
+    "int4": 3,
+    "int8": 3,
+    "fp16": 3,
+    "max_new_tokens": 2,
+    "purpose": "wiring/metadata validation, not a performance or quality study"
+  },
+  "intel_gpu_generation_smoke": {
+    "status": "passed",
+    "device": "GPU",
+    "model": "INT4",
+    "input_tokens": 35,
+    "output_tokens": 8,
+    "execution": "host, rebuilt binary, project-local Intel OpenCL",
+    "purpose": "generation and resource counter wiring, not a new comparison study"
+  },
+  "pip_check": "No broken requirements found",
+  "docs_policy": "docs/ remains ignored and untracked",
+  "source_release_status": "Changes are not staged or committed",
+  "limitations": [
+    "No successful RTX 3050 model inference",
+    "No measured NPU inference",
+    "No full re-export in fresh environment",
+    "Known long-context recall failure in recorded quality studies",
+    "Final prescribed submission PDF not assembled"
+  ]
+}

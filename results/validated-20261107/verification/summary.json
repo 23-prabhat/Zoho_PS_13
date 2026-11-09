@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-07T21:02:07.257800+05:30",
+  "ctest_passed": 28,
+  "ctest_failed": 0,
+  "ctest_skipped": 0,
+  "script_tests": 38,
+  "release_build": "passed",
+  "offline_enforcement": "Linux x86-64 seccomp denies non-AF_UNIX socket creation; TCP/UDP denial checked before fresh three-turn inference",
+  "native_binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27",
+  "isolated_reproduction": "passed; freshly downloaded checkpoint and newly installed pinned environment; SDK archive reused and verified",
+  "new_int4_export_matches_reference_hashes": true,
+  "hosted_ci_execution": false,
+  "remote_branch_parity_verified": false
+}

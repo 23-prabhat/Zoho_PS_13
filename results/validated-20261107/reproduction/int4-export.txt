@@ -1,0 +1,40 @@
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Could not create directory for storing client ID. No data will be sent.
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Could not create directory for storing client ID. No data will be sent.
+`torch_dtype` is deprecated! Use `dtype` instead!
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:  40%|███▉      | 134/338 [00:00<00:00, 1304.91it/s]
+Loading weights:  78%|███████▊  | 265/338 [00:00<00:00, 965.18it/s] 
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 1002.41it/s]
+`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
+/home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/lib64/python3.14/site-packages/transformers/cache_utils.py:131: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if not self.is_initialized or self.keys.numel() == 0:
+`cache_position` is deprecated as an arg, and will be removed in Transformers v5.6. Please use `q_length` and `q_offset` instead, similarly to `kv_length` and `kv_offset`
+/home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/lib64/python3.14/site-packages/transformers/masking_utils.py:192: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  if (padding_length := kv_length + kv_offset - attention_mask.shape[-1]) > 0:
+/home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/lib64/python3.14/site-packages/optimum/exporters/openvino/patching_utils.py:247: TracerWarning: torch.tensor results are registered as constants in the trace. You can safely ignore this warning if you use this function to create tensors out of constant variables that would be the same every time you call this function. In any other case, this might cause the trace to be incorrect.
+  torch.tensor(0.0, device=mask.device, dtype=dtype),
+/home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/lib64/python3.14/site-packages/optimum/exporters/openvino/patching_utils.py:248: TracerWarning: torch.tensor results are registered as constants in the trace. You can safely ignore this warning if you use this function to create tensors out of constant variables that would be the same every time you call this function. In any other case, this might cause the trace to be incorrect.
+  torch.tensor(torch.finfo(torch.float16).min, device=mask.device, dtype=dtype),
+/home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/lib64/python3.14/site-packages/transformers/integrations/sdpa_attention.py:77: TracerWarning: Converting a tensor to a Python boolean might cause the trace to be incorrect. We can't record the data flow of Python values, so this value will be treated as a constant in the future. This means that the trace might not generalize to other inputs!
+  is_causal = query.shape[2] > 1 and attention_mask is None and is_causal
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Failed to create openvino_telemetry file. Please allow write access to the following directory: /home/prabhat
+WARNING:root:Could not create directory for storing client ID. No data will be sent.
+Could not infer whether the model was already converted or not to the OpenVINO IR, keeping `export=False`.
+Path.replace() takes 2 positional arguments but 3 were given
+INFO:nncf:Statistics of the bitwidth distribution:
+┍━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┯━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┑
+│ Weight compression mode   │ % all parameters (layers)   │ % ratio-defining parameters (layers)   │
+┝━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┿━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┥
+│ float                     │ 0% (1 / 198)                │ 0% (0 / 196)                           │
+├───────────────────────────┼─────────────────────────────┼────────────────────────────────────────┤
+│ int8_asym, per-channel    │ 15% (1 / 198)               │ 0% (0 / 196)                           │
+├───────────────────────────┼─────────────────────────────┼────────────────────────────────────────┤
+│ int4_asym, group size 128 │ 85% (196 / 198)             │ 100% (196 / 196)                       │
+┕━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┷━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙
+Applying Weight Compression ━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% • 0:00:08 • 0:00:00

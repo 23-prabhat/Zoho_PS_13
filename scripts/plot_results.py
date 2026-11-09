@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Create dependency-free SVG charts from Shikai benchmark CSV files."""
-import argparse, csv, statistics
+import argparse, csv, math, statistics
 from pathlib import Path
 
 COLORS = ["#f97316", "#2563eb", "#16a34a", "#9333ea"]
@@ -8,9 +8,12 @@ COLORS = ["#f97316", "#2563eb", "#16a34a", "#9333ea"]
 def rows(path):
     with path.open(newline="", encoding="utf-8") as stream: return list(csv.DictReader(stream))
 
+def valid_metric(value):
+    return value not in (None, "") and math.isfinite(float(value)) and float(value) >= 0
+
 def svg_bar(path, title, labels, values, unit):
     width, height, left, top, bottom = 760, 430, 90, 60, 70
-    plot_h, plot_w, maximum = height-top-bottom, width-left-30, max(values) * 1.15
+    plot_h, plot_w, maximum = height-top-bottom, width-left-30, max(max(values) * 1.15, 1)
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
         '<rect width="100%" height="100%" fill="#ffffff"/>',
         f'<text x="{width/2}" y="32" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold">{title}</text>',
@@ -29,7 +32,7 @@ def svg_line(path, title, points, x_label, y_label):
     width, height, left, top, bottom = 780, 440, 90, 60, 75
     plot_h, plot_w = height-top-bottom, width-left-35
     xs, ys = [p[0] for p in points], [p[1] for p in points]
-    xmax, ymax = max(xs)*1.05, max(ys)*1.12
+    xmax, ymax = max(max(xs)*1.05, 1), max(max(ys)*1.12, 1)
     coords = [(left+x/xmax*plot_w, top+plot_h-y/ymax*plot_h) for x,y in points]
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">', '<rect width="100%" height="100%" fill="white"/>',
         f'<text x="{width/2}" y="32" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold">{title}</text>',
@@ -48,21 +51,27 @@ def main():
     parser.add_argument("--output", type=Path, default=Path("docs/assets"))
     args = parser.parse_args(); args.output.mkdir(parents=True, exist_ok=True)
     data = [row for path in args.results for row in rows(path)]
-    perf = [r for r in data if r.get("suite") == "performance"]
+    perf = [r for r in data if r.get("suite") == "performance" and valid_metric(r.get("throughput_tok_s"))]
     labels = [p for p in ("int4", "int8", "fp16") if any(r.get("precision") == p for r in perf)]
     means = [statistics.fmean(float(r["throughput_tok_s"]) for r in perf if r["precision"] == p) for p in labels]
     if means:
         svg_bar(args.output/"precision-throughput.svg", "Decode throughput by weight precision", [p.upper() for p in labels], means, "tok/s")
-    context = sorted(((float(r["input_tokens"]), float(r["ttft_ms"])) for r in data if r.get("suite") == "context"))
+    context = sorted(((float(r["input_tokens"]), float(r["ttft_ms"])) for r in data
+                      if r.get("suite") == "context" and valid_metric(r.get("ttft_ms"))))
     if context:
         grouped = sorted({x for x, _ in context})
         context = [(x, statistics.fmean(y for raw_x, y in context if raw_x == x)) for x in grouped]
         svg_line(args.output/"context-ttft.svg", "Prompt length versus time to first token", context, "Formatted input tokens", "TTFT (ms)")
     quality_data = rows(args.quality_results) if args.quality_results else data
     quality = [r for r in quality_data if r.get("suite") == "quality"]
-    qlabels = [p for p in ("int4", "int8", "fp16") if any(r.get("precision") == p for r in quality)]
-    scores = [statistics.fmean(float(r["quality_score"]) for r in quality if r["precision"] == p) for p in qlabels]
-    if scores:
-        svg_bar(args.output/"quality-scores.svg", "Automatic quality rubric by precision", [p.upper() for p in qlabels], scores, "/2")
+    if any("strict_status" in r for r in quality):
+        objective = [r for r in quality if r.get("strict_status") in ("pass", "fail")]
+        qlabels = [p for p in ("int4", "int8", "fp16") if any(r.get("precision") == p for r in objective)]
+        scores = [100*statistics.fmean(r["strict_status"] == "pass" for r in objective if r["precision"] == p) for p in qlabels]
+        if scores: svg_bar(args.output/"quality-scores.svg", "Declared objective fixture pass rate (not general accuracy)", [p.upper() for p in qlabels], scores, "%")
+    else:
+        qlabels = [p for p in ("int4", "int8", "fp16") if any(r.get("precision") == p for r in quality)]
+        scores = [statistics.fmean(float(r["quality_score"]) for r in quality if r["precision"] == p) for p in qlabels]
+        if scores: svg_bar(args.output/"quality-scores.svg", "Legacy keyword coverage by precision", [p.upper() for p in qlabels], scores, "/2")
 
 if __name__ == "__main__": main()

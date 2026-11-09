@@ -1,0 +1,21 @@
+{
+  "checked_at": "2026-11-03T16:01:22.871869+05:30",
+  "ctest_passed": 28,
+  "ctest_failed": 0,
+  "ctest_skipped": 0,
+  "script_tests": 14,
+  "offline_enforcement": "Linux x86-64 seccomp; non-AF_UNIX socket creation denied; fresh three-turn conversation passed",
+  "native_binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27",
+  "release_build": "passed",
+  "syntax_and_diff_checks": "passed",
+  "historical_evidence": "unchanged",
+  "remaining_limits": [
+    "Long-context recall and strict instruction compliance are unresolved model limitations",
+    "Intel GPU experimental; no successful RTX 3050 or NPU validation claimed",
+    "No full model re-export in a newly installed environment repeated",
+    "Hosted GitHub Actions execution not performed by this local validation"
+  ],
+  "clean_source_build": "Passed from /tmp in a source path containing spaces; prepared SDK/Python toolchain reused; no weights present",
+  "clean_source_unit_tests": 6,
+  "report": "17 pages; original 15 pages preserved with a two-page current validation and KV-cache appendix; rendered and visually reviewed"
+}

@@ -1,0 +1,81 @@
+{
+  "source": "nvidia-smi",
+  "scope": "entire inference process lifetime, including load and warmup",
+  "utilization_scope": "device-wide; may include other processes",
+  "sample_interval_ms": 200.0,
+  "process_peak_vram_mib": 1218.0,
+  "device_mean_util_percent": 4.4,
+  "samples": [
+    {
+      "timestamp": 1792493500.9023144,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493501.14437,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493501.3887854,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493501.6343532,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493501.8892372,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 308.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493502.1492574,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 682.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493502.4025111,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1066.0,
+      "device_util_percent": 22.0
+    },
+    {
+      "timestamp": 1792493502.6534414,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1134.0,
+      "device_util_percent": 22.0
+    },
+    {
+      "timestamp": 1792493502.898728,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1218.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493503.143264,
+      "pid": 24583,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 392.0,
+      "device_util_percent": 0.0
+    }
+  ],
+  "error": ""
+}

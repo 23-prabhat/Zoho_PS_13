@@ -2,7 +2,9 @@
   "source": {
     "repository": "Qwen/Qwen2.5-1.5B-Instruct",
     "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0",
+    "checkpoint_path": "models/source/qwen2.5-1.5b-instruct",
+    "checkpoint_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
   },
   "export": {
     "path": "models/qwen2.5-1.5b/fp16",
@@ -11,7 +13,11 @@
     "size_bytes": 3108814933,
     "sha256": {
       "openvino_model.xml": "fcbe81ef203050979444ff1e808e652937d6aac1943811c3107dcad1884d08c7",
-      "openvino_model.bin": "29b14137e7ba0e9401af8481c91b44f132a03493b067c561b567be6fb0b4ac35"
+      "openvino_model.bin": "29b14137e7ba0e9401af8481c91b44f132a03493b067c561b567be6fb0b4ac35",
+      "openvino_tokenizer.xml": "a6325c21edc4e47c816b6fe92999e24c37db4154812efd8b0332bf6e945e36ff",
+      "openvino_tokenizer.bin": "1a86fe0ec56c7ba457f7cdcad87b2ed186e55a75ae7231cea7cfae80c162dc4c",
+      "openvino_detokenizer.xml": "8ecd7685ea91107d9abe4585259ee2cbfa4e1e9adb5859ca809c8c8f2c3a5eff",
+      "openvino_detokenizer.bin": "3ca47601554a3b871c1e45e8f31aa6e17d726365c075fb430d1a2089484ae8d6"
     }
   },
   "smoke_test": {

@@ -6,11 +6,41 @@
 /.venv/
 /venv/
 /env/
+/output/
+/tmp/
+/dist/
+CMakeUserPresets.json
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Testing/
+build.ninja
+.ninja_deps
+.ninja_log
+compile_commands.json
+*.o
+*.obj
+*.a
+*.so
+*.so.*
+*.dylib
+*.dll
+*.exe
 
 # Local agent/tool state and credentials
 /.agents/
 /.aws/
 /.codex/
+.ssh/
+.netrc
+.npmrc
+*.key
+*.pem
+*.p12
+*.pfx
+*.KEY
+*.PEM
 
 # Python caches and tooling state
 __pycache__/
@@ -20,27 +50,37 @@ __pycache__/
 .ruff_cache/
 *.egg-info/
 
-# Downloaded checkpoints and generated OpenVINO weights
+# Model storage is local; publish only documentation and provenance manifests.
+/models/*
+!/models/README.md
+!/models/manifests/
+!/models/source/
 /models/source/*
 !/models/source/.gitkeep
-/models/qwen2.5-1.5b/*/
 
-# Generated benchmark runs; keep only curated files committed deliberately
-/results/run-*/
+# Generated measurements are local; only this reviewed evidence snapshot is public.
+/results/*
+!/results/README.md
+!/results/validated-20261020/
+!/results/validated-20261103/
+!/results/validated-20261107/
+!/results/validated-20261109/
 *.jsonl.tmp
 
 # Local/private transcripts and environment files
 *.transcript.json
 .env
 .env.*
+.ENV
+.ENV.*
 !.env.example
 
 # Logs, profiling output, crash dumps, and temporary files
 *.log
 *.prof
 *.trace
-core
-core.*
+/core
+/core.[0-9]*
 *.tmp
 *.swp
 *~
@@ -51,7 +91,10 @@ core.*
 .DS_Store
 Thumbs.db
 
-SETU20265SemProjectSelection1.pdf
-zoho_project_list_software.pdf
-plan.md
-docs/
+# Local submission material and planning (docs/ stays untracked intentionally).
+/docs/
+/SUBMISSION_READINESS.md
+/SETU20265SemProjectSelection1.pdf
+/zoho_project_list_software.pdf
+/plan.md
+/SETU Project Submission Guidelines – 2026 - SETU 2026.pdf

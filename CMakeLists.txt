@@ -6,16 +6,18 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 find_package(OpenVINOGenAI REQUIRED)
+find_package(Threads REQUIRED)
 
 add_library(shikai_core
   src/chat_session.cpp
   src/context_policy.cpp
   src/device_probe.cpp
   src/metrics.cpp
+  src/resource_profiler.cpp
   src/model_registry.cpp
 )
 target_include_directories(shikai_core PUBLIC include)
-target_link_libraries(shikai_core PUBLIC openvino::genai openvino::runtime)
+target_link_libraries(shikai_core PUBLIC openvino::genai openvino::runtime Threads::Threads)
 target_compile_options(shikai_core PRIVATE
   $<$<CXX_COMPILER_ID:GNU,Clang>:-Wall;-Wextra;-Wpedantic>
 )

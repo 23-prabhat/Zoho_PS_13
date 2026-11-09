@@ -1,0 +1,10 @@
+{
+  "source": "nvidia-smi",
+  "scope": "entire inference process lifetime, including load and warmup",
+  "utilization_scope": "device-wide; may include other processes",
+  "sample_interval_ms": 200.0,
+  "process_peak_vram_mib": null,
+  "device_mean_util_percent": null,
+  "samples": [],
+  "error": ""
+}

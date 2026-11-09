@@ -1,0 +1,13 @@
+{
+  "binary_sha256": "5bc33a637831adb3f94ffd0598f5dbfd390d81680ca2aaa845b1079be7ac95cd",
+  "performance_repetitions": 3,
+  "performance_warmup_runs": 1,
+  "performance_max_new_tokens": 32,
+  "quality_cases": 6,
+  "quality_repetitions": 1,
+  "quality_max_new_tokens": 128,
+  "execution": "Host GPU device access, project-local Intel OpenCL ICD. No system packages installed.",
+  "decision": "Keep CPU as default; Intel UHD GPU offloads CPU work but was slower in this workload.",
+  "memory_accounting": "DRM buffers are allocations in shared system RAM, not dedicated resident VRAM. Do not interpret lower process RSS as equivalent total RAM saved.",
+  "nvidia_result": "RTX 3050 detected through system ICD but failed OpenVINO OpenCL kernel compilation; separate failed-run artifacts retained."
+}

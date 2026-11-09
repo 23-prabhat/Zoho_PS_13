@@ -1,0 +1,8 @@
+{
+  "checkpoint_explanation": "A new copy of the same pinned Qwen checkpoint was downloaded from Hugging Face during this review and passed the checkpoint SHA-256 check. The isolated source workflow then copied that newly downloaded checkpoint, so its internal origin is explicitly recorded as a verified local copy. The separate dependency environment was freshly installed during this review; the SDK archive was reused and checksum-verified.",
+  "checkpoint_sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+  "dependency_log": "fresh-dependency-install.txt",
+  "checkpoint_log": "fresh-checkpoint-download.txt",
+  "prepared_environment_is_original_project_environment": false,
+  "sdk_download_repeated": false
+}

@@ -1,0 +1,4 @@
+# Native build and model-free tests only. Also pinned in export.lock.txt.
+# The full model export stack is unnecessary for this workflow.
+cmake==4.1.2
+ninja==1.13.2

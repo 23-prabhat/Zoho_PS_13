@@ -1,3 +1,0 @@
-FROM ubuntu:24.04
-
-# Add only after the native Fedora feasibility check and dependency versions are pinned.

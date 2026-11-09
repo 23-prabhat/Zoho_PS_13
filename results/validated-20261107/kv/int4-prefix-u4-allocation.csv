@@ -1,0 +1,4 @@
+repetition,cache_allocated_bytes,max_cache_usage_percent,avg_cache_usage_percent,ttft_ms,input_tokens,output_tokens,response
+1,77070336,1.5625,1.30208,1704.36,32,3,"OK."
+2,77070336,1.5625,1.30208,55.8189,32,3,"OK."
+3,77070336,1.5625,1.30208,55.6967,32,3,"OK."

@@ -18,7 +18,7 @@ std::size_t ContextPolicy::formatted_token_count(
 }
 
 bool ContextPolicy::fits(std::size_t input_tokens) const {
-    return input_tokens + reserved_output_ <= budget_;
+    return input_tokens <= budget_ - reserved_output_;
 }
 
 }  // namespace local_llm

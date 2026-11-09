@@ -1,0 +1,102 @@
+[
+  {
+    "profile": "auto-128",
+    "command": [
+      "/home/prabhat/college/Zoho_5th_sem/scripts/shikai",
+      "cache-probe",
+      "--prompt",
+      "Explain KV cache briefly.",
+      "--threads",
+      "4",
+      "--prefix-caching",
+      "--repetitions",
+      "3",
+      "--max-new-tokens",
+      "8",
+      "--output",
+      "/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/auto-128.csv",
+      "--num-kv-blocks",
+      "128"
+    ],
+    "returncode": 0,
+    "stdout": "Cache allocation probe saved to \"/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/auto-128.csv\". Allocated bytes include free pool blocks; usage counters describe the probe pipeline.\n",
+    "stderr": "",
+    "binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27"
+  },
+  {
+    "profile": "u4-128",
+    "command": [
+      "/home/prabhat/college/Zoho_5th_sem/scripts/shikai",
+      "cache-probe",
+      "--prompt",
+      "Explain KV cache briefly.",
+      "--threads",
+      "4",
+      "--prefix-caching",
+      "--repetitions",
+      "3",
+      "--max-new-tokens",
+      "8",
+      "--output",
+      "/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/u4-128.csv",
+      "--num-kv-blocks",
+      "128",
+      "--kv-cache-precision",
+      "u4"
+    ],
+    "returncode": 0,
+    "stdout": "Cache allocation probe saved to \"/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/u4-128.csv\". Allocated bytes include free pool blocks; usage counters describe the probe pipeline.\n",
+    "stderr": "",
+    "binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27"
+  },
+  {
+    "profile": "f16-128",
+    "command": [
+      "/home/prabhat/college/Zoho_5th_sem/scripts/shikai",
+      "cache-probe",
+      "--prompt",
+      "Explain KV cache briefly.",
+      "--threads",
+      "4",
+      "--prefix-caching",
+      "--repetitions",
+      "3",
+      "--max-new-tokens",
+      "8",
+      "--output",
+      "/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/f16-128.csv",
+      "--num-kv-blocks",
+      "128",
+      "--kv-cache-precision",
+      "f16"
+    ],
+    "returncode": 0,
+    "stdout": "Cache allocation probe saved to \"/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/f16-128.csv\". Allocated bytes include free pool blocks; usage counters describe the probe pipeline.\n",
+    "stderr": "",
+    "binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27"
+  },
+  {
+    "profile": "auto-1gb",
+    "command": [
+      "/home/prabhat/college/Zoho_5th_sem/scripts/shikai",
+      "cache-probe",
+      "--prompt",
+      "Explain KV cache briefly.",
+      "--threads",
+      "4",
+      "--prefix-caching",
+      "--repetitions",
+      "3",
+      "--max-new-tokens",
+      "8",
+      "--output",
+      "/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/auto-1gb.csv",
+      "--cache-size-gb",
+      "1"
+    ],
+    "returncode": 0,
+    "stdout": "Cache allocation probe saved to \"/home/prabhat/college/Zoho_5th_sem/results/cache-probe-current/auto-1gb.csv\". Allocated bytes include free pool blocks; usage counters describe the probe pipeline.\n",
+    "stderr": "",
+    "binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27"
+  }
+]

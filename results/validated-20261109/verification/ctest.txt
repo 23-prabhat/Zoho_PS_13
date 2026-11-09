@@ -1,0 +1,67 @@
+Test project /home/prabhat/college/Zoho_5th_sem/build/release
+      Start  1: resource_profiler
+ 1/28 Test  #1: resource_profiler ....................   Passed    0.09 sec
+      Start  2: config_validation
+ 2/28 Test  #2: config_validation ....................   Passed    0.09 sec
+      Start  3: argument_validation
+ 3/28 Test  #3: argument_validation ..................   Passed    3.00 sec
+      Start  4: cache_option_validation
+ 4/28 Test  #4: cache_option_validation ..............   Passed    0.41 sec
+      Start  5: missing_model_files
+ 5/28 Test  #5: missing_model_files ..................   Passed    0.10 sec
+      Start  6: context_limit
+ 6/28 Test  #6: context_limit ........................   Passed    1.54 sec
+      Start  7: rejected_prompt_preserves_history
+ 7/28 Test  #7: rejected_prompt_preserves_history ....   Passed    4.08 sec
+      Start  8: noninteractive_context_limit
+ 8/28 Test  #8: noninteractive_context_limit .........   Passed    5.67 sec
+      Start  9: benchmark_jsonl_parsing
+ 9/28 Test  #9: benchmark_jsonl_parsing ..............   Passed    8.39 sec
+      Start 10: single_token_metrics
+10/28 Test #10: single_token_metrics .................   Passed   11.12 sec
+      Start 11: resource_metrics
+11/28 Test #11: resource_metrics .....................   Passed    3.99 sec
+      Start 12: kv_cache_configuration
+12/28 Test #12: kv_cache_configuration ...............   Passed   17.87 sec
+      Start 13: conversation_reset
+13/28 Test #13: conversation_reset ...................   Passed    3.90 sec
+      Start 14: fresh_engine_reset_equivalence
+14/28 Test #14: fresh_engine_reset_equivalence .......   Passed    8.36 sec
+      Start 15: metrics_reporting
+15/28 Test #15: metrics_reporting ....................   Passed    4.14 sec
+      Start 16: real_model_smoke
+16/28 Test #16: real_model_smoke .....................   Passed    4.68 sec
+      Start 17: complete_turn_trimming
+17/28 Test #17: complete_turn_trimming ...............   Passed    7.19 sec
+      Start 18: conversation_continuity
+18/28 Test #18: conversation_continuity ..............   Passed    6.19 sec
+      Start 19: cancellation_recovery
+19/28 Test #19: cancellation_recovery ................   Passed    5.27 sec
+      Start 20: streaming_generate_cancellation
+20/28 Test #20: streaming_generate_cancellation ......   Passed    4.21 sec
+      Start 21: prefix_cache_reset
+21/28 Test #21: prefix_cache_reset ...................   Passed    5.33 sec
+      Start 22: conversation_benchmark
+22/28 Test #22: conversation_benchmark ...............   Passed    2.95 sec
+      Start 23: cache_allocation_probe
+23/28 Test #23: cache_allocation_probe ...............   Passed    5.69 sec
+      Start 24: missing_tokenizer
+24/28 Test #24: missing_tokenizer ....................   Passed    0.08 sec
+      Start 25: unavailable_device
+25/28 Test #25: unavailable_device ...................   Passed    0.32 sec
+      Start 26: memory_reset_cycles
+26/28 Test #26: memory_reset_cycles ..................   Passed    4.78 sec
+      Start 27: preparation_and_reporting
+27/28 Test #27: preparation_and_reporting ............   Passed    0.42 sec
+      Start 28: network_denied_offline_three_turns
+28/28 Test #28: network_denied_offline_three_turns ...   Passed    3.68 sec
+
+100% tests passed, 0 tests failed out of 28
+
+Label Time Summary:
+integration    = 102.63 sec*proc (19 tests)
+offline        =   3.68 sec*proc (1 test)
+reliability    =  13.14 sec*proc (2 tests)
+unit           =   4.11 sec*proc (6 tests)
+
+Total Test time (real) = 123.57 sec

@@ -1,0 +1,4 @@
+repetition,cache_allocated_bytes,max_cache_usage_percent,avg_cache_usage_percent,ttft_ms,input_tokens,output_tokens,response
+1,67895296,1.5625,1.5625,3112.45,35,8,"KV cache, or Key-Value cache"
+2,67895296,1.5625,1.5625,92.6257,35,8,"KV cache, or Key-Value cache"
+3,67895296,1.5625,1.5625,85.6644,35,8,"KV cache, or Key-Value cache"

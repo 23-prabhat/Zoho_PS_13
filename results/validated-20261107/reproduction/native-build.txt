@@ -1,0 +1,25 @@
+[setupvars.sh] OpenVINO environment initialized
+-- The CXX compiler identification is GNU 16.2.1
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Found Python3: /home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/.venv/bin/python3.14 (found version "3.14.8") found components: Interpreter
+-- Configuring done (0.4s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/workflow/source/build/release
+[1/11] Building CXX object CMakeFiles/shikai_core.dir/src/model_registry.cpp.o
+[2/11] Building CXX object tests/CMakeFiles/resource_profiler_test.dir/test_resources.cpp.o
+[3/11] Building CXX object CMakeFiles/shikai_core.dir/src/metrics.cpp.o
+[4/11] Building CXX object CMakeFiles/shikai_core.dir/src/context_policy.cpp.o
+[5/11] Building CXX object CMakeFiles/shikai_core.dir/src/resource_profiler.cpp.o
+[6/11] Building CXX object CMakeFiles/shikai_core.dir/src/device_probe.cpp.o
+[7/11] Building CXX object CMakeFiles/shikai_core.dir/src/chat_session.cpp.o
+[8/11] Linking CXX static library libshikai_core.a
+[9/11] Linking CXX executable tests/resource_profiler_test
+[10/11] Building CXX object CMakeFiles/shikai.dir/src/main.cpp.o
+[11/11] Linking CXX executable shikai

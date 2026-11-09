@@ -1,0 +1,8 @@
+
+Fetching 10 files:   0%|          | 0/10 [00:00<?, ?it/s]Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Fetching 10 files:  80%|████████  | 8/10 [00:01<00:00,  7.00it/s]
+Fetching 10 files:  90%|█████████ | 9/10 [00:19<00:02,  2.22s/it]
+Fetching 10 files: 100%|██████████| 10/10 [30:36<00:00, 183.62s/it]
+Fetching 10 files: 100%|██████████| 10/10 [30:36<00:00, 183.62s/it]
+Verified pinned checkpoint at /home/prabhat/college/Zoho_5th_sem/.cache/reproducibility-20261107/checkpoint

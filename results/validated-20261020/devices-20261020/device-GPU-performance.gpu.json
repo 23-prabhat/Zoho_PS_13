@@ -1,0 +1,123 @@
+{
+  "source": "nvidia-smi",
+  "scope": "entire inference process lifetime, including load and warmup",
+  "utilization_scope": "device-wide; may include other processes",
+  "sample_interval_ms": 200.0,
+  "process_peak_vram_mib": 1220.0,
+  "device_mean_util_percent": 4.9375,
+  "samples": [
+    {
+      "timestamp": 1792493496.5202522,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 13.0
+    },
+    {
+      "timestamp": 1792493496.7657046,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493497.0106652,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493497.2562492,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 82.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493497.5095875,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 308.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493497.769946,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 664.0,
+      "device_util_percent": 22.0
+    },
+    {
+      "timestamp": 1792493498.0256271,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1050.0,
+      "device_util_percent": 22.0
+    },
+    {
+      "timestamp": 1792493498.2704315,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1134.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493498.5245545,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1134.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493498.769961,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1218.0,
+      "device_util_percent": 3.0
+    },
+    {
+      "timestamp": 1792493499.0131717,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1218.0,
+      "device_util_percent": 3.0
+    },
+    {
+      "timestamp": 1792493499.2560391,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1218.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493499.499327,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1220.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493499.7421248,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1220.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493499.9854362,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 1220.0,
+      "device_util_percent": 0.0
+    },
+    {
+      "timestamp": 1792493500.2526577,
+      "pid": 24455,
+      "gpu_uuid": "GPU-4a5b4ddd-6986-e962-6e88-f0979dd044f8",
+      "process_vram_mib": 58.0,
+      "device_util_percent": 16.0
+    }
+  ],
+  "error": ""
+}

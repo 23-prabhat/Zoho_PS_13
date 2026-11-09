@@ -1,1 +1,3 @@
-# Pin pandas and matplotlib after the benchmark schema is implemented.
+# Intentionally no third-party dependencies.
+# run_benchmarks.py and plot_results.py use only the Python standard library.
+# Validated with CPython 3.14.8; SVG charts do not require pandas or matplotlib.

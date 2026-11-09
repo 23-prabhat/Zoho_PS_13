@@ -1,0 +1,10 @@
+{
+  "platform": "Linux-7.2.13-200.fc44.x86_64-x86_64-with-glibc2.43",
+  "python": "3.14.8",
+  "cpu": "13th Gen Intel(R) Core(TM) i5-13420H",
+  "memory": "MemTotal:       16041976 kB",
+  "native_binary_sha256": "315abf9d14ba8844fea382ca1e1a5c8c3cc3987ab666f00828c64e65bc7d8e27",
+  "model_format": "INT4",
+  "runtime": "OpenVINO GenAI 2026.4.1.0",
+  "notes": "Performance studies run sequentially. Laptop thermals/power/background load are not laboratory controlled."
+}

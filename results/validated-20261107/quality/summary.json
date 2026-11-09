@@ -1,0 +1,40 @@
+{
+  "grader_version": "strict-v1",
+  "fixtures_sha256": "4a93f42ce90c2bf38b8a5c3917b17cc7058c26272b5fca1e910439e7380d4d26",
+  "scope": "Pass rate for declared objective fixtures, including exact output formatting; not general accuracy.",
+  "manual_review": "Open-ended explanations are saved separately and excluded from automatic pass rates.",
+  "profiles": {
+    "fp16-auto": {
+      "objective_cases": 22,
+      "passed": 9,
+      "failed": 13,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 40.91
+    },
+    "fp16-f16-kv": {
+      "objective_cases": 22,
+      "passed": 9,
+      "failed": 13,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 40.91
+    },
+    "int4-auto": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int8-auto": {
+      "objective_cases": 22,
+      "passed": 9,
+      "failed": 13,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 40.91
+    }
+  }
+}

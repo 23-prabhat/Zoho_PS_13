@@ -1,0 +1,44 @@
+{
+  "openvino": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "Available OpenVINO devices\n  \u25cf CPU     13th Gen Intel(R) Core(TM) i5-13420H\n      Device default KV-cache precision hint: u8\n  \u25cf GPU     NVIDIA GeForce RTX 3050 6GB Laptop GPU (dGPU)\n      Device default KV-cache precision hint: dynamic"
+  },
+  "devices": [
+    {
+      "id": "CPU",
+      "name": "13th Gen Intel(R) Core(TM) i5-13420H"
+    },
+    {
+      "id": "GPU",
+      "name": "NVIDIA GeForce RTX 3050 6GB Laptop GPU (dGPU)"
+    }
+  ],
+  "gpu_devices": [
+    "GPU"
+  ],
+  "render_nodes": [
+    "/dev/dri/renderD128",
+    "/dev/dri/renderD129"
+  ],
+  "opencl_icds": [
+    "/etc/OpenCL/vendors/nvidia.icd"
+  ],
+  "pci_graphics": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "00:02.0 VGA compatible controller [0300]: Intel Corporation Raptor Lake-P [UHD Graphics] [8086:a7a8] (rev 04)\n01:00.0 VGA compatible controller [0300]: NVIDIA Corporation GA107BM / GN20-P0-R-K2 [GeForce RTX 3050 6GB Laptop GPU] [10de:25ac] (rev a1)"
+  },
+  "opencl": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "Platform #0: NVIDIA CUDA\n `-- Device #0: NVIDIA GeForce RTX 3050 6GB Laptop GPU"
+  },
+  "nvidia": {
+    "status": "ok",
+    "returncode": 0,
+    "output": "NVIDIA GeForce RTX 3050 6GB Laptop GPU, 6144 MiB, 615.71.09"
+  },
+  "gpu_status": "available",
+  "next_step": "Run the devices benchmark suite to compare the same model and prompts on CPU and detected GPUs."
+}

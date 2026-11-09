@@ -8,5 +8,6 @@
   "max_num_seqs": 1,
   "enable_prefix_caching": false,
   "cache_size_gb": 0,
-  "enable_eviction": false
+  "enable_eviction": false,
+  "kv_cache_precision": "auto"
 }

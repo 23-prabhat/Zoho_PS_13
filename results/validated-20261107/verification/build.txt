@@ -1,0 +1,5 @@
+[setupvars.sh] OpenVINO environment initialized
+-- Configuring done (0.1s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/prabhat/college/Zoho_5th_sem/build/release
+ninja: no work to do.

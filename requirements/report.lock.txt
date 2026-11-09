@@ -1,0 +1,5 @@
+# Optional PDF addendum authoring tools; inference and tests do not need these.
+reportlab==5.1.0
+pypdf==6.21.4
+pillow==13.0.0
+charset-normalizer==3.5.2

@@ -1,0 +1,56 @@
+{
+  "grader_version": "strict-v1",
+  "fixtures_sha256": "4a93f42ce90c2bf38b8a5c3917b17cc7058c26272b5fca1e910439e7380d4d26",
+  "scope": "Pass rate for declared objective fixtures, including exact output formatting; not general accuracy.",
+  "manual_review": "Open-ended explanations are saved separately and excluded from automatic pass rates.",
+  "profiles": {
+    "int4-auto": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int4-eviction-1024": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int4-prefix-128": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int4-prefix-256": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int4-prefix-64": {
+      "objective_cases": 22,
+      "passed": 7,
+      "failed": 15,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 31.82
+    },
+    "int4-prefix-u4": {
+      "objective_cases": 22,
+      "passed": 8,
+      "failed": 14,
+      "needs_review": 2,
+      "execution_errors": 0,
+      "pass_percent": 36.36
+    }
+  }
+}

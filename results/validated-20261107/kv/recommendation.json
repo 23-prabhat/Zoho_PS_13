@@ -1,0 +1,158 @@
+{
+  "profiles": {
+    "int4-auto": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 7,
+        "failed": 15,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 31.82
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 2,
+        "failed": 14,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 12.5
+      },
+      "warm_ttft_ms": 1363.13,
+      "cold_ttft_ms": 2305.93,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 1060864,
+      "eligible_opt_in_candidate": false
+    },
+    "int4-eviction-1024": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 7,
+        "failed": 15,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 31.82
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 2,
+        "failed": 14,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 12.5
+      },
+      "warm_ttft_ms": 1527.36,
+      "cold_ttft_ms": 2765.26,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 1060864,
+      "eligible_opt_in_candidate": false
+    },
+    "int4-prefix-128": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 7,
+        "failed": 15,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 31.82
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 2,
+        "failed": 14,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 12.5
+      },
+      "warm_ttft_ms": 123.42,
+      "cold_ttft_ms": 2600.8,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 67895296,
+      "eligible_opt_in_candidate": true
+    },
+    "int4-prefix-256": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 7,
+        "failed": 15,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 31.82
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 2,
+        "failed": 14,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 12.5
+      },
+      "warm_ttft_ms": 126.25,
+      "cold_ttft_ms": 2700.44,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 135790592,
+      "eligible_opt_in_candidate": true
+    },
+    "int4-prefix-64": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 7,
+        "failed": 15,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 31.82
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 2,
+        "failed": 14,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 12.5
+      },
+      "warm_ttft_ms": 104.22,
+      "cold_ttft_ms": 2346.31,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 33947648,
+      "eligible_opt_in_candidate": true
+    },
+    "int4-prefix-u4": {
+      "quality": {
+        "objective_cases": 22,
+        "passed": 8,
+        "failed": 14,
+        "needs_review": 2,
+        "execution_errors": 0,
+        "pass_percent": 36.36
+      },
+      "conversation": {
+        "objective_cases": 16,
+        "passed": 8,
+        "failed": 8,
+        "needs_review": 0,
+        "execution_errors": 0,
+        "pass_percent": 50.0
+      },
+      "warm_ttft_ms": 128.29,
+      "cold_ttft_ms": 2733.77,
+      "regressions_on_baseline_passes": [],
+      "conversation_regressions_on_baseline_passes": [],
+      "probe_reserved_bytes": 77070336,
+      "eligible_opt_in_candidate": true
+    }
+  },
+  "experimental_candidate": "int4-prefix-64",
+  "memory_focused_candidate": "int4-prefix-64",
+  "quality_focused_candidate": "int4-prefix-u4",
+  "eligible_pareto_frontier": [
+    "int4-prefix-64",
+    "int4-prefix-u4"
+  ],
+  "default_change_justified": false,
+  "selection_rule": "No lost baseline objective or conversation passes and no execution errors; follow-up TTFT at least 20% lower and cold TTFT no more than 25% higher. Select least diagnostic reservation among eligible profiles.",
+  "limits": "Finite synthetic fixtures do not prove answer equivalence. Cache-probe reservations are separate from application RSS; default remains unchanged."
+}

@@ -1,0 +1,363 @@
+Start testing: Oct 20 16:40 IST
+----------------------------------------------------------
+1/23 Testing: resource_profiler
+1/23 Test: resource_profiler
+Command: "/home/prabhat/college/Zoho_5th_sem/build/release/tests/resource_profiler_test"
+Directory: /home/prabhat/college/Zoho_5th_sem/build/release/tests
+"resource_profiler" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"resource_profiler" end time: Oct 20 16:40 IST
+"resource_profiler" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/23 Testing: config_validation
+2/23 Test: config_validation
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "config" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"config_validation" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.09 sec
+----------------------------------------------------------
+Test Passed.
+"config_validation" end time: Oct 20 16:40 IST
+"config_validation" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/23 Testing: argument_validation
+3/23 Test: argument_validation
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "arguments" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"argument_validation" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   2.42 sec
+----------------------------------------------------------
+Test Passed.
+"argument_validation" end time: Oct 20 16:40 IST
+"argument_validation" time elapsed: 00:00:02
+----------------------------------------------------------
+
+4/23 Testing: missing_model_files
+4/23 Test: missing_model_files
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "missing_model" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"missing_model_files" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"missing_model_files" end time: Oct 20 16:40 IST
+"missing_model_files" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/23 Testing: context_limit
+5/23 Test: context_limit
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "context" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"context_limit" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   1.52 sec
+----------------------------------------------------------
+Test Passed.
+"context_limit" end time: Oct 20 16:40 IST
+"context_limit" time elapsed: 00:00:01
+----------------------------------------------------------
+
+6/23 Testing: rejected_prompt_preserves_history
+6/23 Test: rejected_prompt_preserves_history
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "rejection_history" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"rejected_prompt_preserves_history" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.50 sec
+----------------------------------------------------------
+Test Passed.
+"rejected_prompt_preserves_history" end time: Oct 20 16:40 IST
+"rejected_prompt_preserves_history" time elapsed: 00:00:03
+----------------------------------------------------------
+
+7/23 Testing: noninteractive_context_limit
+7/23 Test: noninteractive_context_limit
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "generate_context" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"noninteractive_context_limit" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   4.52 sec
+----------------------------------------------------------
+Test Passed.
+"noninteractive_context_limit" end time: Oct 20 16:40 IST
+"noninteractive_context_limit" time elapsed: 00:00:04
+----------------------------------------------------------
+
+8/23 Testing: benchmark_jsonl_parsing
+8/23 Test: benchmark_jsonl_parsing
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "jsonl" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"benchmark_jsonl_parsing" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   6.56 sec
+----------------------------------------------------------
+Test Passed.
+"benchmark_jsonl_parsing" end time: Oct 20 16:40 IST
+"benchmark_jsonl_parsing" time elapsed: 00:00:06
+----------------------------------------------------------
+
+9/23 Testing: single_token_metrics
+9/23 Test: single_token_metrics
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "short_metrics" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"single_token_metrics" start time: Oct 20 16:40 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   9.58 sec
+----------------------------------------------------------
+Test Passed.
+"single_token_metrics" end time: Oct 20 16:41 IST
+"single_token_metrics" time elapsed: 00:00:09
+----------------------------------------------------------
+
+10/23 Testing: resource_metrics
+10/23 Test: resource_metrics
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "resource_metrics" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"resource_metrics" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.30 sec
+----------------------------------------------------------
+Test Passed.
+"resource_metrics" end time: Oct 20 16:41 IST
+"resource_metrics" time elapsed: 00:00:03
+----------------------------------------------------------
+
+11/23 Testing: kv_cache_configuration
+11/23 Test: kv_cache_configuration
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "kv_config" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"kv_cache_configuration" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =  13.24 sec
+----------------------------------------------------------
+Test Passed.
+"kv_cache_configuration" end time: Oct 20 16:41 IST
+"kv_cache_configuration" time elapsed: 00:00:13
+----------------------------------------------------------
+
+12/23 Testing: conversation_reset
+12/23 Test: conversation_reset
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "reset" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"conversation_reset" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.28 sec
+----------------------------------------------------------
+Test Passed.
+"conversation_reset" end time: Oct 20 16:41 IST
+"conversation_reset" time elapsed: 00:00:03
+----------------------------------------------------------
+
+13/23 Testing: fresh_engine_reset_equivalence
+13/23 Test: fresh_engine_reset_equivalence
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "fresh_reset" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"fresh_engine_reset_equivalence" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   6.57 sec
+----------------------------------------------------------
+Test Passed.
+"fresh_engine_reset_equivalence" end time: Oct 20 16:41 IST
+"fresh_engine_reset_equivalence" time elapsed: 00:00:06
+----------------------------------------------------------
+
+14/23 Testing: metrics_reporting
+14/23 Test: metrics_reporting
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "metrics" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"metrics_reporting" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.20 sec
+----------------------------------------------------------
+Test Passed.
+"metrics_reporting" end time: Oct 20 16:41 IST
+"metrics_reporting" time elapsed: 00:00:03
+----------------------------------------------------------
+
+15/23 Testing: real_model_smoke
+15/23 Test: real_model_smoke
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "smoke" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"real_model_smoke" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   3.42 sec
+----------------------------------------------------------
+Test Passed.
+"real_model_smoke" end time: Oct 20 16:41 IST
+"real_model_smoke" time elapsed: 00:00:03
+----------------------------------------------------------
+
+16/23 Testing: complete_turn_trimming
+16/23 Test: complete_turn_trimming
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "trimming" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"complete_turn_trimming" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   5.31 sec
+----------------------------------------------------------
+Test Passed.
+"complete_turn_trimming" end time: Oct 20 16:41 IST
+"complete_turn_trimming" time elapsed: 00:00:05
+----------------------------------------------------------
+
+17/23 Testing: conversation_continuity
+17/23 Test: conversation_continuity
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "continuity" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"conversation_continuity" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   5.26 sec
+----------------------------------------------------------
+Test Passed.
+"conversation_continuity" end time: Oct 20 16:41 IST
+"conversation_continuity" time elapsed: 00:00:05
+----------------------------------------------------------
+
+18/23 Testing: cancellation_recovery
+18/23 Test: cancellation_recovery
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "cancellation" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"cancellation_recovery" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   4.97 sec
+----------------------------------------------------------
+Test Passed.
+"cancellation_recovery" end time: Oct 20 16:41 IST
+"cancellation_recovery" time elapsed: 00:00:04
+----------------------------------------------------------
+
+19/23 Testing: missing_tokenizer
+19/23 Test: missing_tokenizer
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "missing_tokenizer" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"missing_tokenizer" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.13 sec
+----------------------------------------------------------
+Test Passed.
+"missing_tokenizer" end time: Oct 20 16:41 IST
+"missing_tokenizer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/23 Testing: unavailable_device
+20/23 Test: unavailable_device
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "unavailable_device" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"unavailable_device" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"unavailable_device" end time: Oct 20 16:41 IST
+"unavailable_device" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/23 Testing: memory_reset_cycles
+21/23 Test: memory_reset_cycles
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_cli.py" "memory_cycles" "/home/prabhat/college/Zoho_5th_sem/build/release/shikai"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"memory_reset_cycles" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+<end of output>
+Test time =   5.38 sec
+----------------------------------------------------------
+Test Passed.
+"memory_reset_cycles" end time: Oct 20 16:41 IST
+"memory_reset_cycles" time elapsed: 00:00:05
+----------------------------------------------------------
+
+22/23 Testing: preparation_and_reporting
+22/23 Test: preparation_and_reporting
+Command: "/home/prabhat/college/Zoho_5th_sem/.venv/bin/python3.14" "/home/prabhat/college/Zoho_5th_sem/tests/test_scripts.py"
+Directory: /home/prabhat/college/Zoho_5th_sem/build/release/tests
+"preparation_and_reporting" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+...........
+----------------------------------------------------------------------
+Ran 11 tests in 0.383s
+
+OK
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"preparation_and_reporting" end time: Oct 20 16:41 IST
+"preparation_and_reporting" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/23 Testing: network_isolated_offline
+23/23 Test: network_isolated_offline
+Command: "/home/prabhat/college/Zoho_5th_sem/tests/offline_test.sh"
+Directory: /home/prabhat/college/Zoho_5th_sem
+"network_isolated_offline" start time: Oct 20 16:41 IST
+Output:
+----------------------------------------------------------
+Network namespaces are not permitted in this environment; offline namespace test skipped.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"network_isolated_offline" end time: Oct 20 16:41 IST
+"network_isolated_offline" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 20 16:41 IST
+
+integration =  68.24 sec*proc
+
+offline =   0.01 sec*proc
+
+reliability =  11.95 sec*proc
+
+unit =   3.19 sec*proc
+
