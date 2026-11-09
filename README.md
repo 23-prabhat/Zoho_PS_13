@@ -41,6 +41,18 @@ Install Git, Bash, Python **3.14** with `venv` support, a C++17 compiler (`g++` 
 `clang++`), `curl`, `tar`, and standard Linux tools including `sha256sum` and
 `readlink`. CMake and Ninja are installed in the next step. A GPU is optional.
 
+The SDK also links to the **OpenCL ICD loader (`libOpenCL.so.1`) even in CPU mode**.
+Install `ocl-icd-libopencl1` on Ubuntu 24.04 or `ocl-icd` on Fedora if it is missing:
+
+```bash
+# Ubuntu 24.04
+sudo apt-get update
+sudo apt-get install --yes --no-install-recommends ocl-icd-libopencl1
+# Fedora alternative: sudo dnf install ocl-icd
+```
+
+The loader alone does not enable GPU inference; CPU use needs no GPU driver setup.
+
 The validation laptop has 16 GB RAM; INT4 generation used about 2 GB process RAM
 in the recorded study. Export requires additional memory. Allow at least 15 GB
 free disk space for the default setup, including the source checkpoint, Python

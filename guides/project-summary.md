@@ -114,7 +114,7 @@ precision, one warmup per prompt and up to 128 output tokens:
 | INT8 | 9.62 tokens/s | 3113.25 MiB |
 | FP16 | 5.34 tokens/s | 6291.66 MiB |
 
-INT4 delivered about **2.70× the FP16 decode rate** and **68.8% lower mean peak
+INT4 delivered about **2.71× the FP16 decode rate** and **68.8% lower mean peak
 RSS** in this workload. This supports CPU/INT4/automatic KV as the default on the
 test laptop. The measurements do not establish equal answer quality.
 
@@ -154,6 +154,9 @@ conversations and uncontrolled laptop conditions limit generalization.
   Public source includes this explanation; student details remain in the ZIP.
 - The PDF tables have visible cell boundaries, wrapped headers, fixed widths and
   repeating header rows. The final PDF is rendered and checked before packaging.
+- The first clean Ubuntu CI build exposed a missing OpenCL ICD loader. The SDK
+  links `libOpenCL.so.1` even in CPU mode. CI now installs `ocl-icd-libopencl1`, and
+  setup documents that dependency (`ocl-icd` on Fedora) separately from GPU drivers.
 
 The new evidence is in `results/validated-20261109/`; earlier snapshots retain
 their original methods, timestamps, results and hashes.

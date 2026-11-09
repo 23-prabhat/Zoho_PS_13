@@ -9,7 +9,10 @@ reporting a problem. Remove private prompt content and credentials from reports.
 
 Native unit tests and preparation/reporting regressions do not require Qwen weights,
 PyTorch, export tools, a GPU or an API key. They do need the native SDK and a C++17
-compiler. From the repository root on Linux x86-64:
+compiler and the OpenCL ICD loader (`libOpenCL.so.1`), which the SDK links even in
+CPU mode. Install `ocl-icd-libopencl1` on Ubuntu 24.04 or `ocl-icd` on Fedora, as
+described in the README. A GPU device/runtime is not required for CPU execution.
+From the repository root on Linux x86-64:
 
 ```bash
 python3.14 -m venv .venv
