@@ -16,8 +16,8 @@ scripts/shikai text eol=lf
 *.zip binary
 
 # Preserve recorded artifact bytes so evidence checksums survive a Git checkout.
-results/validated-20261020/** -text
-results/validated-20261103/** -text
-results/validated-20261107/** -text
-results/validated-20261109/** -text
-third_party/** -text
+results/validated-20261020/** -text -whitespace
+results/validated-20261103/** -text -whitespace
+results/validated-20261107/** -text -whitespace
+results/validated-20261109/** -text -whitespace
+third_party/** -text -whitespace
