@@ -67,9 +67,13 @@ drivers. Keep AC power, power mode and background load consistent for comparison
 
 ### Optional project-local Intel GPU runtime on Fedora
 
-On the validated laptop, the system OpenCL ICD exposed the RTX 3050, but the model's
-OpenVINO GPU kernels failed to compile on that device. The Intel UHD graphics needed
-an Intel OpenCL userspace runtime. This optional bootstrap downloads signed Fedora
+The bundled OpenVINO GPU plugin targets Intel integrated/discrete GPUs; the
+[official GPU guide](https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/gpu-device.html) and
+[supported hardware list](https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html)
+were checked on 9 November 2026. The RTX 3050 is outside that supported target set.
+Its exposure through the system OpenCL ICD did not establish supported model
+execution; the retained compilation failure documents that attempt. The Intel UHD
+graphics needed an Intel OpenCL userspace runtime. This optional bootstrap downloads signed Fedora
 RPMs and extracts them under `.deps/`; it does not install system packages, modify
 kernel drivers, or change render-device permissions:
 

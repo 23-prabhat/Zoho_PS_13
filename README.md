@@ -331,8 +331,9 @@ under enforced network denial. Optional cached inputs are identified explicitly.
 
 Known limits: the small keyword rubric is not model accuracy; long-context recall
 failed in recorded comparisons; Intel GPU output quality differed from CPU; RTX
-3050 model kernel compilation failed on the tested runtime. No successful RTX or
-NPU inference is claimed. Missing runtime metrics appear as `N/A`, with blank CSV
+3050 is outside the bundled Intel GPU plugin supported target list. Its retained
+compilation failure records an unsupported-target attempt; NPU inference remains
+unvalidated. See [official support references](guides/hardware-and-benchmarks.md#optional-project-local-intel-gpu-runtime-on-fedora). Missing runtime metrics appear as `N/A`, with blank CSV
 cells, rather than fabricated zeroes.
 
 ## Troubleshooting

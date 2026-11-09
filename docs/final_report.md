@@ -24,6 +24,23 @@ Weights, KV tensors, transcript text, cache reservation and RSS are distinct con
 [Architecture](architecture.md) and the [feature-purpose guide](../guides/project-summary.md)
 explain every material implementation and why it is needed.
 
+## Why C++ and Python both belong in this solution
+
+Problem 13 explicitly requires the **OpenVINO GenAI C++ API**. C++17 is the deployed
+backend: local model loading, streaming generation, conversation ownership,
+context/cache controls, cancellation, device discovery and runtime measurements.
+Python handles the preparation ecosystem (download, conversion and compression)
+and repeatable evaluation of the native child process. It is not an inference
+service in the deployed path. This split satisfies the required backend while
+making assets and experiments reproducible; no language-speed comparison is claimed.
+
+Hugging Face Hub/Transformers identify and load the source model; CPU PyTorch and
+Optimum Intel export it; NNCF compresses weights. OpenVINO GenAI C++ generates text,
+Runtime executes the network and OpenVINO Tokenizers handles local text/token
+conversion. CMake/Ninja/GCC build it, Bash launches it, and CTest/unittest/CI verify
+it. [Technology responsibilities](../guides/technology-and-delivery.md) distinguish
+direct project features from transitive and report-production dependencies.
+
 ## Model, precision and hardware decisions
 
 The checkpoint revision and hashes are pinned in [manifests](../models/manifests/README.md).
@@ -32,6 +49,24 @@ automatic threads/cache precision, one sequence and a 2048-token input/output bu
 are the validated default. The 16 GB i5-13420H laptop workload measured 14.44 tokens/s
 for INT4 versus 5.34 for FP16, with mean lifetime peak RSS 1961.95 versus 6291.66 MiB.
 The separate CPU/Intel UHD study favored CPU decode speed; GPU remains experimental.
+
+| Measured resource | INT4 | INT8 | FP16 |
+|---|---:|---:|---:|
+| Export directory, decimal GB | 0.94 | 1.57 | 3.11 |
+| Mean process-lifetime peak RAM, decimal GB | 2.06 | 3.26 | 6.60 |
+| CPU decode rate, tokens/s | 14.4 | 9.6 | 5.3 |
+
+GB means 10^9 bytes; the RAM row converts the original MiB measurements. These are
+observed process peaks in the 15-row precision study, not minimum installed RAM.
+Recommended host: the validated i5-13420H-class x86-64 CPU with **16 GB RAM**, Linux
+and the pinned native SDK; allow OS/context headroom and additional setup disk space.
+The optional Intel UHD/iGPU needs its matching driver/runtime and shares system RAM.
+
+INT4 remains the footprint/speed default, with an explicit quality cost: **7/22**
+strict passes versus **9/22** for INT8/FP16. It answered `17 + 25` with `32`, while
+the others answered `42`. **INT8 is the quality-leaning alternative**: it retained
+the FP16 fixture passes with less memory and faster decode. The unrounded precision
+means give 14.44062 / 5.3376006667 = 2.70545, correctly reported as **2.71×**.
 
 See [quantization](quantization.md), [environment](environment.md) and the
 [benchmark report](benchmark_report.md) for methodology, sample counts and raw evidence.
@@ -43,6 +78,15 @@ chunked prefill, precision requests and eviction. A separate native diagnostic
 measures reservation; it does not infer cache size from RSS. Prefix reuse improves
 matching-prefix follow-ups in recorded workloads; eviction may discard useful
 context and does not reduce initial prefill by itself.
+
+The 3 November three-turn study reduced follow-up TTFT from **3821.68 to 236.79 ms**
+(about **16.1×**) with prefix-128, while cold TTFT stayed near **6.1 s**. Separate
+allocation diagnostics measured **32.38 MiB for 64 blocks**, **64.75 MiB for 128**
+and **1023.86 MiB for a 1 GB requested pool**. U4/128 reserved **73.50 MiB**, more
+than automatic cache; it offers a different measured quality/memory trade-off.
+Eviction showed no clear benefit in the retained latency/quality experiments.
+The 64-block result is from the later November 7 study; workloads and absolute
+timings from the two studies are kept separate in the [KV guide](../guides/kv-cache.md).
 
 The versioned strict suite has 22 objective fixtures and two explanation answers.
 INT4/auto passed 7/22; the three tested INT8/FP16 alternatives passed 9/22. All four
@@ -75,7 +119,18 @@ Follow [README setup](../README.md), then use the [demonstration checklist](demo
 The SDK requires `libOpenCL.so.1` even for CPU mode. Models, SDKs, environments and
 build products are recreated locally rather than committed.
 
+## Limitations
+
+Current totals are **28 CTest and 43 Python tests**. October's 22 CTest passes
+(one skip) and November 7's 38 Python tests are historical snapshots.
 The solution covers the stated local-inference systems scope. Training, RAG,
 persistent memory, speculative decoding and a GUI remain unimplemented extensions.
-RTX model compilation failed on the tested stack; NPU and other platforms are
-unvalidated. Laptop thermals/load and finite synthetic fixtures limit generalization.
+The bundled OpenVINO GPU plugin targets Intel integrated/discrete hardware;
+RTX 3050 is outside its supported target list. Its retained compilation failure
+documents an unsupported-target attempt, rather than a supported NVIDIA benchmark.
+This interpretation follows the official [GPU guide](https://docs.openvino.ai/2026/openvino-workflow/running-inference/inference-devices-and-modes/gpu-device.html)
+and [supported hardware list](https://docs.openvino.ai/2026/about-openvino/release-notes-openvino/system-requirements.html),
+checked 9 November 2026. Device enumeration alone does not establish supported model execution.
+NPU and other platforms remain unvalidated. Laptop thermals/load and finite
+synthetic fixtures limit generalization; RSS, reserved cache and shared GPU buffers
+are distinct accounting categories. No electrical-power savings are measured.

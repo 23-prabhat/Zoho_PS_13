@@ -116,12 +116,17 @@ precision, one warmup per prompt and up to 128 output tokens:
 
 INT4 delivered about **2.71× the FP16 decode rate** and **68.8% lower mean peak
 RSS** in this workload. This supports CPU/INT4/automatic KV as the default on the
-test laptop. The measurements do not establish equal answer quality.
+test laptop. The ratio uses unrounded CSV means (2.70545, rounded to 2.71).
+INT4 passed 7/22 strict fixtures versus 9/22 for INT8/FP16, including the arithmetic
+error `17 + 25 = 32`; INT8 is the quality-leaning alternative with less memory and
+faster decode than FP16 on this workload.
 
 The separate Intel UHD workload measured 8.84 tokens/s on GPU and 17.98 on CPU.
-GPU execution lowered CPU work but did not improve decode speed here. NVIDIA
-model-kernel compilation failed on the tested stack. GPU remains experimental;
-successful RTX/NPU inference is not claimed.
+GPU execution lowered CPU work but did not improve decode speed here. The bundled
+OpenVINO GPU plugin targets Intel hardware; RTX 3050 is outside its supported target
+list. The retained failure records that unsupported-target attempt. GPU remains
+experimental; NPU execution is unvalidated. See the official sources in
+[hardware guidance](hardware-and-benchmarks.md).
 
 The 7 November strict comparison contained 22 objective tasks and two saved
 explanations per profile. INT4/auto passed 7/22; INT8/auto, FP16/auto and
@@ -184,7 +189,7 @@ reuse, select `configs/cpu-prefix-small.json`; inspect quality as well as latenc
 
 The college upload is **PRABHAT-JHA_SWFW_5S_13_PROJECT-FILES.zip**, containing the
 named PDF and complete additional source/evidence files. The PDF includes student
-details, project details, work done, real screenshots, system/model information,
+details, introduction, implemented solution, real screenshots, system/model information,
 setup, architecture, benchmark tables/figures, citations and known limitations.
 The ZIP includes a per-entry SHA-256 manifest and excludes downloaded weights,
 SDKs, environments, credentials and build products. README setup recreates assets.

@@ -13,7 +13,7 @@ Validated environment; hardware comparison refreshed on 2026-10-20:
 - OpenVINO Tokenizers 2026.4.1.0
 - Qwen2.5-1.5B-Instruct INT4, INT8 and FP16 exports on CPU
 - Intel UHD integrated GPU: successful INT4 inference through project-local Intel OpenCL
-- NVIDIA RTX 3050, 6 GB VRAM: detected via system ICD; model kernel compilation failed
+- NVIDIA RTX 3050, 6 GB VRAM: exposed by the system ICD, outside the bundled Intel GPU plugin supported targets; the attempted model compilation failed
 
 `python -m pip check` reports no broken requirements. The C++ executable was linked
 against the matching 2026.4.1 native GenAI bundle and passed an offline generation

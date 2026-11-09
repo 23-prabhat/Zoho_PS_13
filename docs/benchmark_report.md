@@ -77,16 +77,29 @@ CPU use was 378.53% versus 100.70% (100% is one logical CPU). GPU process RSS wa
 lower but shared-system GPU buffers occupied about 1254 MiB and can overlap RAM
 accounting. No total physical memory reduction is claimed. Six-case rubric means
 were CPU 1.17/2 and GPU 0.67/2; long-context recall failed on both. The RTX 3050
-attempt failed kernel compilation. Keep these limits with any hardware claims.
+is outside the bundled Intel GPU plugin supported targets; the recorded compilation
+failure is an unsupported-target attempt, not a supported NVIDIA benchmark. See
+[official support references](../guides/hardware-and-benchmarks.md#optional-project-local-intel-gpu-runtime-on-fedora).
 
 ## Limitations
 
 - CPU thermals, frequency, power mode, and background load were not externally fixed.
 - RSS is whole-process memory and cannot isolate exact KV allocation.
 - Automatic matching can miss valid paraphrases; five cases do not establish general accuracy.
-- Intel GPU was subsequently benchmarked; NPU was not. NVIDIA model compilation failed.
+- Intel GPU was subsequently benchmarked; NPU was not. RTX 3050 is outside the bundled Intel GPU plugin supported targets.
 - Cache-hit counters were not exposed; the prefix finding relies on timing.
 - The October namespace-only test skipped; current offline testing falls back to enforced seccomp denial and passed with zero skips.
+
+## November 3 whole-conversation cache result
+
+Three fresh-process, three-turn CPU/INT4 conversations per profile, four threads,
+and up to 16 output tokens measured mean follow-up TTFT of **3821.68 ms** for
+baseline versus **236.79 ms** for prefix-128 (16.1×), with cold TTFT near **6.1 s**
+for both. The separate diagnostic reserved 64.75 MiB for auto/128 versus 1023.86 MiB
+for a 1 GB requested pool; U4/128 used **more**, at 73.50 MiB. Eviction showed no clear
+benefit. The [KV guide](../guides/kv-cache.md) retains all settings and raw evidence.
+The November 7 results below use different prompts/output limits and are not pooled
+with these timings.
 
 ## November strict quality and cache evidence
 
