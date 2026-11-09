@@ -38,3 +38,5 @@ installed font when displayed. The symbol is original project artwork. Keep at
 least 12 design units clear around the 128-unit mark; do not stretch, rotate or add
 a box, glow or gradient. Use the reversed version on dark surfaces. Below 24 px,
 prefer the terminal/text name where the central aperture becomes too small.
+
+Validation transcripts remove ANSI formatting, normalize CRLF to LF and trim line-end spaces for readable diffs. The previews use the captured application text.
