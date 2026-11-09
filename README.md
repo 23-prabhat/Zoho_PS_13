@@ -1,8 +1,12 @@
 # Shikai — Offline LLM inference in C++
 
+![Shikai folded S identity](assets/brand/shikai-lockup.svg)
+
 Shikai runs **Qwen2.5-1.5B-Instruct locally** through the OpenVINO GenAI C++ API.
 It provides a streaming terminal chat application and a benchmark harness for
 comparing model precision, context length, CPU threading and GPU execution.
+
+Reusable vector, transparent PNG and terminal versions are in the [brand asset kit](assets/brand/README.md).
 
 For a complete explanation of each feature, its purpose, the execution flow and
 the measured decisions, read the [project summary](guides/project-summary.md).

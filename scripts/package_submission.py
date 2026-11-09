@@ -22,7 +22,7 @@ PUBLIC_DOCS = ("docs/README.md", "docs/architecture.md", "docs/requirements.md",
 ROOT_FILES = (".gitignore", ".editorconfig", ".gitattributes", "CMakeLists.txt",
     "CMakePresets.json", "README.md", "CONTRIBUTING.md", "THIRD_PARTY_NOTICES.md",
     "models/README.md", "models/source/.gitkeep", "results/README.md") + PUBLIC_DOCS
-SOURCE_FOLDERS = (".github", "src", "include", "scripts", "tests", "configs",
+SOURCE_FOLDERS = (".github", "src", "include", "scripts", "tests", "configs", "assets/brand",
     "requirements", "benchmarks", "models/manifests", "third_party", "guides",
     "results/validated-20261020", "results/validated-20261103", "results/validated-20261107",
     "results/validated-20261109")

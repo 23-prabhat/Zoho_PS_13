@@ -1,0 +1,20 @@
+[
+  {
+    "columns": 90,
+    "color": true,
+    "wide_mark": true,
+    "passed": true
+  },
+  {
+    "columns": 90,
+    "color": false,
+    "wide_mark": true,
+    "passed": true
+  },
+  {
+    "columns": 50,
+    "color": false,
+    "wide_mark": false,
+    "passed": true
+  }
+]

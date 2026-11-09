@@ -1,0 +1,21 @@
+/exit
+
+        __________
+      / _________/      S H I K A I  v0.2.0
+     / /____
+    /___ <> \           Local intelligence. Yours.
+        / __/
+    ___/ /
+   /____/
+
+     Qwen2.5-1.5B-Instruct INT4 · OpenVINO GenAI · CPU
+     /home/prabhat/college/Zoho_5th_sem
+------------------------------------------------------------------
+  Try "Explain quantization like I am a beginner"
+------------------------------------------------------------------
+  Qwen2.5-1.5B-Instruct INT4 | ready | load 1220 ms | context 2048 | max output 1 | greedy
+  scheduler: sequences=1 prefix=off eviction=off cache=dynamic prefill-chunk=256 threads=runtime
+  KV-cache precision request: auto
+
+> 
+Goodbye.

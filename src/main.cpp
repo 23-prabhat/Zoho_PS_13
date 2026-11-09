@@ -3,6 +3,7 @@
 #include <openvino/openvino.hpp>
 
 #include "local_llm/chat_session.hpp"
+#include "local_llm/brand.hpp"
 #include "local_llm/context_policy.hpp"
 #include "local_llm/device_probe.hpp"
 #include "local_llm/metrics.hpp"
@@ -12,6 +13,7 @@
 #include <algorithm>
 #include <charconv>
 #include <csignal>
+#include <cstdlib>
 #include <filesystem>
 #include <fstream>
 #include <iomanip>
@@ -27,6 +29,7 @@
 
 #ifdef __linux__
 #include <unistd.h>
+#include <sys/ioctl.h>
 #endif
 
 namespace {
@@ -70,6 +73,7 @@ void handle_interrupt(int) { cancellation_requested = 1; }
 using GenerationStats = local_llm::GenerationMetrics;
 
 bool use_color() {
+    if (std::getenv("NO_COLOR")) return false;
 #ifdef __linux__
     return ::isatty(STDOUT_FILENO) != 0;
 #else
@@ -295,8 +299,28 @@ std::string read_text(const fs::path& path) {
 
 void print_header(const Options& options, double load_ms) {
     const auto rule = std::string(66, '-');
-    std::cout << paint("38;5;208", "  ◉") << "  " << paint("1", "Shikai")
-              << " v" << VERSION << '\n'
+    bool wide_terminal = false;
+#ifdef __linux__
+    winsize terminal_size{};
+    wide_terminal = ::isatty(STDOUT_FILENO) &&
+        ::ioctl(STDOUT_FILENO, TIOCGWINSZ, &terminal_size) == 0 && terminal_size.ws_col >= 72;
+#endif
+    if (wide_terminal) {
+        std::cout << '\n';
+        for (std::size_t row = 0; row < local_llm::brand::mark.size(); ++row) {
+            std::cout << "  " << paint(row < 3 ? "38;5;43" : "38;5;215",
+                std::string(local_llm::brand::mark[row]));
+            if (row == 1) std::cout << std::string(22 - local_llm::brand::mark[row].size(), ' ')
+                                    << paint("1", "S H I K A I") << "  v" << VERSION;
+            if (row == 3) std::cout << std::string(22 - local_llm::brand::mark[row].size(), ' ')
+                                    << "Local intelligence. Yours.";
+            std::cout << '\n';
+        }
+        std::cout << '\n';
+    } else {
+        std::cout << paint("1", "Shikai") << " v" << VERSION << '\n';
+    }
+    std::cout
               << "     " << model_label(options.model) << " · OpenVINO GenAI · " << options.device << '\n'
               << "     " << fs::current_path().string() << '\n'
               << paint("2", rule) << '\n'

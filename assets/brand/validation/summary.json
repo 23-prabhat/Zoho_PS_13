@@ -1,0 +1,30 @@
+{
+  "checked_at": "2026-11-09T20:24:35.391372+05:30",
+  "scope": "Visual identity, terminal presentation and NO_COLOR handling; no generation or inference algorithm changes",
+  "ctest_passed": 28,
+  "ctest_failed": 0,
+  "ctest_skipped": 0,
+  "python_tests": 43,
+  "terminal_checks": [
+    {
+      "columns": 90,
+      "color": true,
+      "wide_mark": true,
+      "passed": true
+    },
+    {
+      "columns": 90,
+      "color": false,
+      "wide_mark": true,
+      "passed": true
+    },
+    {
+      "columns": 50,
+      "color": false,
+      "wide_mark": false,
+      "passed": true
+    }
+  ],
+  "native_binary_sha256": "12ab4365522eb540ad8f0f59adf8ad337e18d881898cf452be4f6798b2652489",
+  "historical_benchmark_results_modified": false
+}
